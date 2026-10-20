@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+env-dvc/
+.ipynb_checkpoints/
+
+# Secretos
+.env
+*.pem
+credentials
+.aws/
+
+# DVC cache local
+/.dvc/cache
+/.dvc/tmp
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup

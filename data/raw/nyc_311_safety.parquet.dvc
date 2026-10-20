@@ -1,0 +1,5 @@
+outs:
+- md5: c30b38af49862416a02cca7703a7bc2a
+  size: 115629530
+  hash: md5
+  path: nyc_311_safety.parquet
