@@ -8,12 +8,15 @@ services:
         HOST_GID: ${HOST_GID:-1000}
     ports:
       - "127.0.0.1:8888:8888"   # solo accesible desde tu computador
+    env_file:
+      - .env
     environment:
       JUPYTER_TOKEN: 8fd52092439b02a3f81ed4a34db5f288
-      # Se toman de tu terminal si las defines (para dvc pull/push)
+      # Se toman del .env o de tu terminal (para dvc pull/push)
+      S3_BUCKET_NAME:
       AWS_ACCESS_KEY_ID:
       AWS_SECRET_ACCESS_KEY:
       AWS_SESSION_TOKEN:
-      AWS_DEFAULT_REGION: us-east-1
+      AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION:-us-east-1}
     volumes:
       - .:/work
