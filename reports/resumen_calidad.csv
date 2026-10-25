@@ -1,0 +1,10 @@
+hallazgo,valor,decisión
+Nulos / duplicados / n<=0,0 / 0 / 0,Sin acción si son 0
+Total de solicitudes,"13,506,495",Coincide con la validación
+Días con datos,1461 de 1461,Documentar faltantes
+Borough Unspecified,"15,064 (0.11%)",Excluir de la serie semanal
+Tipos de queja,239 (tras normalizar: 224),Normalizar y agrupar por familia
+Semanas completas,208,Descartar semanas parciales
+Crecimiento 2022 → 2025,12.8%,Niveles relativos a promedio móvil 52 semanas
+Semanas atípicas (|z|>3),69,Revisar y documentar; no eliminar sin causa
+Regla de no urgentes,Pendiente,Equipo define y justifica
