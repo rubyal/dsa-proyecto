@@ -1,0 +1,5 @@
+outs:
+- md5: 3f80468cdee1b337342a3947035cec44
+  size: 63118
+  hash: md5
+  path: dataset_modelado_semanal.parquet
