@@ -10,3 +10,5 @@ ipykernel>=6.0
 nbstripout>=0.7
 adlfs>=2024.4
 pyarrow>=14.0
+streamlit>=1.30.0
+plotly>=5.18.0
