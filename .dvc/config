@@ -1,5 +1,5 @@
 [core]
     remote = aws-remote
 ['remote "aws-remote"']
-    url = s3://miad-dsa-proyecto-efc3d62b/dvcstore
+    url = s3://miad-dsa-proyecto-8fe988a7/dvcstore
     region = us-east-1
