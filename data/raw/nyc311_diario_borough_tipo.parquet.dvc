@@ -1,0 +1,5 @@
+outs:
+- md5: 3d77b271afcadd15395bb13d44e7d400
+  size: 1196376
+  hash: md5
+  path: nyc311_diario_borough_tipo.parquet
