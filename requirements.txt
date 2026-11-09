@@ -12,3 +12,4 @@ adlfs>=2024.4
 pyarrow>=14.0
 streamlit>=1.30.0
 plotly>=5.18.0
+folium>=0.15.0
