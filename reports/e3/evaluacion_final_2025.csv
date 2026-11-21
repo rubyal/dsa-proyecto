@@ -1,0 +1,3 @@
+﻿Modelo,Periodo entrenamiento,Periodo prueba,N,Accuracy,F1-macro,Precision Media,Recall Baja,Recall Media,Recall Alta,Alta->Baja
+Ridge_variables_relativas,2023-2024,2025,255,0.568627,0.528460,0.714286,0.885057,0.153061,0.757143,15
+Referencia_semana_anterior,No aplica; umbrales 2023-2024,2025,255,0.639216,0.640529,0.608247,0.678161,0.602041,0.642857,7

@@ -1,0 +1,25 @@
+
+Umbrales calculados únicamente con 2023:
+                    P33       P67
+borough                          
+BRONX          0.864784  1.006628
+BROOKLYN       1.022183  1.094823
+MANHATTAN      1.003605  1.093308
+QUEENS         1.006841  1.116982
+STATEN ISLAND  0.924106  1.041551
+
+Distribución de clases en entrenamiento 2023:
+nivel_demanda
+Media    90
+Baja     85
+Alta     85
+Name: count, dtype: int64
+
+Distribución de clases en validación 2024:
+nivel_demanda
+Baja     102
+Media     88
+Alta      75
+Name: count, dtype: int64
+
+Etiquetas modificadas en validación 2024: 52 de 265
