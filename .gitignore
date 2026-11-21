@@ -20,3 +20,10 @@ credentials
 *.tfstate
 *.tfstate.backup
 *Zone.Identifier
+
+# Archivos de macOS
+.DS_Store
+
+# Archivos temporales de empaquetamiento
+**/build/
+**/*.egg-info/
