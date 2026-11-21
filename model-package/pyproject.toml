@@ -1,0 +1,22 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nyc311-model"
+version = "0.1.0"
+description = "Modelo RidgeClassifier para clasificación semanal de demanda NYC311"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "joblib"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+nyc311_model = ["artifacts/*.joblib"]
