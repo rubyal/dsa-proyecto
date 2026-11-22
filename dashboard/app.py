@@ -1,20 +1,17 @@
 """
 NYC 311 — Tablero de predicción de demanda semanal por borough
-Despliegue de Soluciones Analíticas · MIAD · Entrega 2
+Despliegue de Soluciones Analíticas · MIAD · Entrega 3
 
 Uso:
     streamlit run app.py
 """
-import numpy as np
 import pandas as pd
+import os
+import requests
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 from pathlib import Path
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from sklearn.pipeline import Pipeline
-from sklearn.linear_model import RidgeClassifier
 
 # ---------------------------------------------------------------------------
 # Configuración de página
@@ -299,78 +296,44 @@ def badge_html(nivel):
 
 
 # ---------------------------------------------------------------------------
-# Modelo: RidgeClassifier alpha=0.1
+# Predicciones servidas por API FastAPI (sin reentrenar en Streamlit)
 # ---------------------------------------------------------------------------
-@st.cache_resource
-def entrenar_modelo(_datos_modelado):
-    """Entrena el RidgeClassifier alpha=0.1 (notebook 06 de Jorge)."""
-    numericas = [c for c in VARIABLES if c != "borough"]
-
-    preprocesador = ColumnTransformer([
-        ("categoria",
-         OneHotEncoder(handle_unknown="ignore", sparse_output=False),
-         ["borough"]),
-        ("numericas", StandardScaler(), numericas),
-    ])
-
-    pipeline = Pipeline([
-        ("preprocesamiento", preprocesador),
-        ("clasificador", RidgeClassifier(alpha=0.1)),
-    ])
-
-    train = _datos_modelado[
-        _datos_modelado["semana"].dt.year.isin([2023, 2024])
-    ].copy()
-
-    pipeline.fit(train[VARIABLES], train[OBJETIVO])
-    return pipeline
+API_URL = os.getenv("API_URL", "http://localhost:8000").rstrip("/")
 
 
-def predecir_proxima_semana(modelo, datos_modelado):
-    """Genera predicción para la próxima semana."""
-    ultima_semana = datos_modelado["semana"].max()
-    proxima = ultima_semana + pd.Timedelta(weeks=1)
+def consultar_api(ruta):
+    """Consulta la API y muestra mensajes de error comprensibles."""
+    try:
+        respuesta = requests.get(f"{API_URL}{ruta}", timeout=20)
+        respuesta.raise_for_status()
+        return respuesta.json()
+    except requests.exceptions.RequestException as exc:
+        raise RuntimeError(f"No se pudo consultar la API en {API_URL}{ruta}: {exc}") from exc
 
+
+@st.cache_data(ttl=300, show_spinner="Consultando predicciones de la API...")
+def predecir_proxima_semana_api(_datos_modelado):
+    """Obtiene del servidor el nivel por borough; no entrena ni predice localmente."""
     predicciones = []
     for borough in BOROUGHS:
-        serie_b = datos_modelado[
-            datos_modelado["borough"] == borough
+        resultado = consultar_api(f"/predict/next-week/{borough.replace(' ', '%20')}")
+        nivel = resultado["nivel_demanda"]
+        if nivel not in COLOR:
+            raise RuntimeError(f"Nivel de demanda inesperado para {borough}: {nivel}")
+
+        historico = _datos_modelado.loc[
+            _datos_modelado["borough"] == borough
         ].sort_values("semana")
-
-        if serie_b.empty:
-            continue
-
-        ultima = serie_b.iloc[-1]
-        proxima_dt = proxima
-        features = {
-            "borough": borough,
-            "mes": proxima_dt.month,
-            "semana_anio": proxima_dt.isocalendar()[1],
-            "lag_1": ultima["total_solicitudes"],
-            "lag_2": ultima["lag_1"],
-            "lag_4": ultima["lag_2"],
-            "lag_52": ultima["lag_52"],
-            "media_movil_4": (
-                ultima["total_solicitudes"] * 0.25
-                + ultima["lag_1"] * 0.25
-                + ultima["lag_2"] * 0.25
-                + ultima["media_movil_4"] * 0.25
-            ),
-            "media_movil_12": ultima["media_movil_12"],
-            "media_movil_52": ultima["media_movil_52"],
-            "std_movil_4": ultima["std_movil_4"],
-        }
-
-        features_df = pd.DataFrame([features])
-        nivel = modelo.predict(features_df[VARIABLES])[0]
-
+        ultimo_total = (
+            int(historico.iloc[-1]["total_solicitudes"])
+            if not historico.empty else None
+        )
         predicciones.append({
             "borough": borough,
-            "semana": proxima,
-            "solicitudes_estimadas": int(ultima["total_solicitudes"]),
+            "semana": pd.to_datetime(resultado["semana"]),
+            "solicitudes_estimadas": ultimo_total,
             "nivel_demanda": nivel,
         })
-
     return pd.DataFrame(predicciones)
 
 
@@ -439,7 +402,15 @@ sem_cat = construir_serie_por_categoria(df_diario)
 datos_modelado = cargar_datos_modelado()
 umbrales = calcular_umbrales(sem)
 umbrales_cat = calcular_umbrales_categoria(sem_cat)
-modelo = entrenar_modelo(datos_modelado)
+try:
+    salud_api = consultar_api("/health")
+    if salud_api.get("status") != "ok":
+        raise RuntimeError("La API no respondió con estado ok")
+    pred = predecir_proxima_semana_api(datos_modelado)
+except (RuntimeError, KeyError, ValueError, TypeError) as exc:
+    st.error(f"No fue posible cargar las predicciones desde FastAPI: {exc}")
+    st.info("Verifica que la API esté ejecutándose y que API_URL apunte al servicio correcto.")
+    st.stop()
 
 # Etiquetar serie histórica
 sem["nivel"] = sem.apply(
@@ -449,7 +420,6 @@ sem["nivel"] = sem.apply(
     axis=1,
 )
 
-pred = predecir_proxima_semana(modelo, datos_modelado)
 pred_cat = predecir_por_categoria(sem_cat, umbrales_cat)
 
 # ---------------------------------------------------------------------------
@@ -462,6 +432,8 @@ with st.sidebar:
         label_visibility="collapsed",
     )
 
+    st.success("API de predicción conectada")
+    st.caption(f"API: {API_URL}")
     st.divider()
     st.markdown("### ℹ️ Modelo")
     st.markdown("""
@@ -531,7 +503,7 @@ if "Inicio" in pagina:
                     <div class="borough-name">{borough}</div>
                     <div class="nivel" style="color: {color};">{nivel}</div>
                     <div class="detalle">
-                        ~{row['solicitudes_estimadas']:,} sol.
+                        Última semana: {row['solicitudes_estimadas']:,} sol.
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
@@ -579,7 +551,7 @@ if "Inicio" in pagina:
                 marker_color=COLOR.get(row_m["nivel"], "#999"),
                 name=row_m["nivel"],
                 showlegend=False,
-                text=f'{row_m["nivel"]} (~{row_m["solicitudes"]:,.0f})',
+                text=f'{row_m["nivel"]} (última semana: {row_m["solicitudes"]:,.0f})',
                 textposition="inside",
                 textfont=dict(color="white", size=13),
             ))
@@ -593,7 +565,7 @@ if "Inicio" in pagina:
         fig_barras.update_layout(
             height=350,
             margin=dict(l=0, r=10, t=10, b=0),
-            xaxis_title="Solicitudes estimadas (próxima semana)",
+            xaxis_title="Solicitudes observadas (última semana histórica)",
             yaxis=dict(autorange="reversed"),
             legend=dict(
                 orientation="h", yanchor="top", y=-0.15,
@@ -672,7 +644,7 @@ if "Inicio" in pagina:
     )
 
     st.caption(
-        "Los niveles por categoría se estiman con el promedio móvil de "
+        "Los niveles por categoría son indicadores históricos (no predicciones de la API): se calculan con el promedio móvil de "
         "las últimas 4 semanas vs. los percentiles 33/66 históricos "
         "de cada combinación borough-categoría."
     )
@@ -806,7 +778,7 @@ elif "Análisis" in pagina:
             value=pred_borough["nivel_demanda"],
             delta=(
                 f"Última semana: "
-                f"~{pred_borough['solicitudes_estimadas']:,} solicitudes"
+                f"{pred_borough['solicitudes_estimadas']:,} solicitudes observadas"
             ),
         )
 
@@ -880,5 +852,5 @@ st.caption(
     "Proyecto MIAD — Despliegue de Soluciones Analíticas · "
     "Laura Vásquez, Ruby Alvarez, Jorge Lopera · "
     "Datos: NYC Open Data 311 Service Requests (2022–2025) · "
-    "Modelo: RidgeClassifier α=0.1 registrado en MLflow"
+    "Predicción semanal: API FastAPI con RidgeClassifier empaquetado"
 )
