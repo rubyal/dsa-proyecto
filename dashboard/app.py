@@ -439,14 +439,17 @@ with st.sidebar:
     st.divider()
     st.markdown("### ℹ️ Modelo")
     st.markdown("""
-    **RidgeClassifier** (α=0.1)
+    **RidgeClassifier** (α=0.1 , clases balanceadas)
 
-    Entrenamiento: 2023–2024
+    **Entrenamiento:** 2023–2024  
+    **Evaluación:** 2025 (255 observaciones)
 
-    **Métricas en 2025:**
+    **Métricas de evaluación:**
     - Accuracy: 56.9%
-    - F1-macro: 0.54
-    - Recall Alta: 75.7%
+    - F1-macro: 0,5285
+    - Recall Baja: 88,51 %
+    - Recall Media: 15,31 %
+    - Recall Alta: 75,71 %
     """)
 
     st.divider()
