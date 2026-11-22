@@ -68,16 +68,18 @@ st.markdown("""
         box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     }
     .pred-card .borough-name {
-        font-size: 13px; color: #555; font-weight: 600;
+        font-size: 13px; color: #E5E7EB; font-weight: 600;
         margin-bottom: 6px;
     }
     .pred-card .nivel {
         font-size: 22px; font-weight: 700;
     }
     .pred-card .detalle {
-        font-size: 12px; color: #777; margin-top: 4px;
-    }
-
+    font-size: 12px;
+    color: #D1D5DB;
+    margin-top: 4px;
+    line-height: 1.5;
+}
     /* Tabla de predicción por categoría */
     .tabla-pred {
         width: 100%;
