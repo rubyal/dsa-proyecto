@@ -1,0 +1,1850 @@
+login as: ubuntu
+Authenticating with public key "Imported-Openssh-Key"
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 • MobaXterm Personal Edition v23.2 •                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ⮞ SSH session to ubuntu@35.168.9.198                                 │
+    │   • Direct SSH      :  ✓                                             │
+    │   • SSH compression :  ✓                                             │
+    │   • SSH-browser     :  ✓                                             │
+    │   • X11-forwarding  :  ✓  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ⮞ For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Welcome to Ubuntu 26.04.1 LTS (GNU/Linux 7.0.0-1018-aws x86_64)
+
+ * Documentation:  https://docs.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Sun Nov 22 16:29:15 UTC 2026
+
+  System load:  0.27               Processes:             132
+  Usage of /:   10.8% of 18.25GB   Users logged in:       0
+  Memory usage: 7%                 IPv4 address for enX0: 172.31.40.115
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+/usr/bin/xauth:  file /home/ubuntu/.Xauthority does not exist
+ubuntu@ip-172-31-40-115:~$ sudo apt update && sudo apt upgrade -y
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates InRelease                                                                                                                               [137 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports InReleas                                                                                                                              e [137 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3 P                                                                                                                              ackages [16.3 MB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe Translati                                                                                                                              on-en [6329 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64 Com                                                                                                                              ponents [4556 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64 c-n                                                                                                                              -f Metadata [313 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/multiverse amd64v3                                                                                                                               Packages [291 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/multiverse Transl                                                                                                                              ation-en [127 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/multiverse amd64                                                                                                                               Components [50.0 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/multiverse amd64                                                                                                                               c-n-f Metadata [8276 B]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 Packages [902 kB]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4 Components [110 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/universe                                                                                                                               amd64v3 Packages [393 kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/universe                                                                                                                               Translation-en [124 kB]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/universe                                                                                                                               amd64 Components [201 kB]
+Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/universe                                                                                                                               amd64 c-n-f Metadata [4704 B]
+Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/multivers                                                                                                                              e amd64v3 Packages [21.1 kB]
+Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/multivers                                                                                                                              e Translation-en [4168 B]
+Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/multivers                                                                                                                              e amd64 Components [216 B]
+Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/multivers                                                                                                                              e amd64 c-n-f Metadata [256 B]
+Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/main am                                                                                                                              d64 Components [212 B]
+Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/main am                                                                                                                              d64 c-n-f Metadata [112 B]
+Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/univers                                                                                                                              e amd64v3 Packages [3144 B]
+Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/univers                                                                                                                              e Translation-en [7988 B]
+Get:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/univers                                                                                                                              e amd64 Components [1056 B]
+Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/univers                                                                                                                              e amd64 c-n-f Metadata [116 B]
+Get:29 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/restric                                                                                                                              ted amd64 Components [216 B]
+Get:30 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/restric                                                                                                                              ted amd64 c-n-f Metadata [120 B]
+Get:31 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/multive                                                                                                                              rse amd64 Components [216 B]
+Get:32 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/multive                                                                                                                              rse amd64 c-n-f Metadata [120 B]
+Get:33 http://security.ubuntu.com/ubuntu resolute-security/main amd64v3 Packages                                                                                                                               [722 kB]
+Get:34 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components                                                                                                                               [46.7 kB]
+Get:35 http://security.ubuntu.com/ubuntu resolute-security/universe amd64v3 Pack                                                                                                                              ages [222 kB]
+Get:36 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-                                                                                                                              en [72.7 kB]
+Get:37 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Compon                                                                                                                              ents [62.8 kB]
+Get:38 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f                                                                                                                               Metadata [3552 B]
+Get:39 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64v3 Pa                                                                                                                              ckages [20.1 kB]
+Get:40 http://security.ubuntu.com/ubuntu resolute-security/multiverse Translatio                                                                                                                              n-en [3728 B]
+Get:41 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Comp                                                                                                                              onents [212 B]
+Get:42 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-                                                                                                                              f Metadata [120 B]
+Fetched 31.3 MB in 4s (8276 kB/s)
+All packages are up to date.
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 0
+ubuntu@ip-172-31-40-115:~$ sudo apt install -y docker.io docker-compose-v2 git p                                                                                                                              ython3-pip python3-venv
+git is already the newest version (1:2.53.0-1ubuntu1.1).
+git set to manually installed.
+Installing:
+  docker-compose-v2  docker.io  python3-pip  python3-venv
+
+Installing dependencies:
+  bridge-utils             libalgorithm-diff-perl     libquadmath0
+  build-essential          libalgorithm-diff-xs-perl  libstdc++-15-dev
+  bzip2                    libalgorithm-merge-perl    libtsan2
+  containerd               libasan8                   libubsan1
+  cpp                      libc-dev-bin               linux-libc-dev
+  cpp-15                   libc6-dev                  lto-disabled-list
+  cpp-15-x86-64-linux-gnu  libcc1-0                   make
+  cpp-x86-64-linux-gnu     libcrypt-dev               manpages-dev
+  dns-root-data            libdpkg-perl               pigz
+  dnsmasq-base             libexpat1-dev              python3-dev
+  dpkg-dev                 libfakeroot                python3-pip-whl
+  fakeroot                 libfile-fcntllock-perl     python3-setuptools-whl
+  g++                      libgcc-15-dev              python3-wheel
+  g++-15                   libgomp1                   python3.14-dev
+  g++-15-x86-64-linux-gnu  libhwasan0                 python3.14-venv
+  g++-x86-64-linux-gnu     libisl23                   rpcsvc-proto
+  gcc                      libitm1                    runc
+  gcc-15                   liblsan0                   ubuntu-fan
+  gcc-15-base              libmpc3                    zlib1g-dev
+  gcc-15-x86-64-linux-gnu  libpython3-dev
+  gcc-x86-64-linux-gnu     libpython3.14-dev
+
+Suggested packages:
+  ifupdown        rootlesskit                flex
+  bzip2-doc       zfs-fuse                   bison
+  cpp-doc         | zfsutils                 gdb
+  gcc-15-locales  debian-keyring             gcc-doc
+  cpp-15-doc      debian-tag2upload-keyring  gcc-15-multilib
+  aufs-tools      g++-multilib               gdb-x86-64-linux-gnu
+  cgroupfs-mount  g++-15-multilib            libc-devtools
+  | cgroup-lite   gcc-15-doc                 glibc-doc
+  debootstrap     gcc-multilib               bzr
+  docker-buildx   autoconf                   libstdc++-15-doc
+  docker-doc      automake                   make-doc
+  rinse           libtool
+
+Summary:
+  Upgrading: 0, Installing: 65, Removing: 0, Not Upgrading: 0
+  Download size: 180 MB
+  Space needed: 668 MB / 17.2 GB available
+
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3 p                                                                                                                              igz amd64 2.8-1build1 [68.5 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 bridg                                                                                                                              e-utils amd64 1.7.1-4ubuntu3 [34.8 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd64                                                                                                                              v3 libc-dev-bin amd64 2.43-2ubuntu2.7 [23.7 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd64                                                                                                                              v3 linux-libc-dev amd64 7.0.0-44.44 [1893 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 rpcsv                                                                                                                              c-proto amd64 1.4.3-1build1 [68.6 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd64                                                                                                                              v3 libc6-dev amd64 2.43-2ubuntu2.7 [2277 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 gcc-1                                                                                                                              5-base amd64 15.2.0-16ubuntu1 [39.1 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libis                                                                                                                              l23 amd64 0.27-1build1 [692 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libmp                                                                                                                              c3 amd64 1.3.1-3 [55.0 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 cpp-                                                                                                                              15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [13.0 MB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 cpp-                                                                                                                              15 amd64 15.2.0-16ubuntu1 [1044 B]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 cpp-                                                                                                                              x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [5852 B]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 cpp                                                                                                                               amd64 4:15.2.0-5ubuntu1 [22.4 kB]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libc                                                                                                                              c1-0 amd64 16-20260322-1ubuntu1 [53.8 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libg                                                                                                                              omp1 amd64 16-20260322-1ubuntu1 [163 kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libi                                                                                                                              tm1 amd64 16-20260322-1ubuntu1 [29.9 kB]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 liba                                                                                                                              san8 amd64 16-20260322-1ubuntu1 [3181 kB]
+Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libl                                                                                                                              san0 amd64 16-20260322-1ubuntu1 [1397 kB]
+Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libt                                                                                                                              san2 amd64 16-20260322-1ubuntu1 [2875 kB]
+Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libu                                                                                                                              bsan1 amd64 16-20260322-1ubuntu1 [1242 kB]
+Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libh                                                                                                                              wasan0 amd64 16-20260322-1ubuntu1 [1733 kB]
+Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libq                                                                                                                              uadmath0 amd64 16-20260322-1ubuntu1 [156 kB]
+Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libg                                                                                                                              cc-15-dev amd64 15.2.0-16ubuntu1 [2867 kB]
+Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 gcc-                                                                                                                              15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [25.6 MB]
+Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 gcc-                                                                                                                              15 amd64 15.2.0-16ubuntu1 [539 kB]
+Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 gcc-                                                                                                                              x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [1220 B]
+Get:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 gcc                                                                                                                               amd64 4:15.2.0-5ubuntu1 [5014 B]
+Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libs                                                                                                                              tdc++-15-dev amd64 15.2.0-16ubuntu1 [2928 kB]
+Get:29 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 g++-                                                                                                                              15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [14.5 MB]
+Get:30 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 g++-                                                                                                                              15 amd64 15.2.0-16ubuntu1 [26.8 kB]
+Get:31 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 g++-                                                                                                                              x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [980 B]
+Get:32 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 g++                                                                                                                               amd64 4:15.2.0-5ubuntu1 [1110 B]
+Get:33 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 make                                                                                                                               amd64 4.4.1-3 [197 kB]
+Get:34 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libd                                                                                                                              pkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:35 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 bzip2 amd64 1.0.8-6ubuntu0.1 [34.4 kB]
+Get:36 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 lto-                                                                                                                              disabled-list all 79 [14.2 kB]
+Get:37 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 dpkg                                                                                                                              -dev all 1.23.7ubuntu1 [1062 kB]
+Get:38 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libc                                                                                                                              rypt-dev amd64 1:4.5.1-1 [122 kB]
+Get:39 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 build-essential amd64 12.12ubuntu2.26.04.2 [5172 B]
+Get:40 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 runc                                                                                                                               amd64 1.4.0-0ubuntu1 [9829 kB]
+Get:41 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 containerd amd64 2.2.2-0ubuntu1.2 [28.1 MB]
+Get:42 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 dns-                                                                                                                              root-data all 2025080400build1 [6022 B]
+Get:43 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 dnsmasq-base amd64 2.92-1ubuntu0.5 [441 kB]
+Get:44 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3                                                                                                                               docker-compose-v2 amd64 2.40.3+ds1-0ubuntu1 [14.8 MB]
+Get:45 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/universe                                                                                                                               amd64v3 docker.io amd64 29.1.3-0ubuntu4.1 [35.5 MB]
+Get:46 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libf                                                                                                                              akeroot amd64 1.37.2-1 [34.0 kB]
+Get:47 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 fake                                                                                                                              root amd64 1.37.2-1 [68.8 kB]
+Get:48 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 liba                                                                                                                              lgorithm-diff-perl all 1.201-1 [41.8 kB]
+Get:49 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 liba                                                                                                                              lgorithm-diff-xs-perl amd64 0.04-9 [11.3 kB]
+Get:50 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 liba                                                                                                                              lgorithm-merge-perl all 0.08-5 [11.4 kB]
+Get:51 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 libexpat1-dev amd64 2.7.4-1ubuntu0.2 [149 kB]
+Get:52 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libf                                                                                                                              ile-fcntllock-perl amd64 0.22-4ubuntu6 [32.8 kB]
+Get:53 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 zlib1g-dev amd64 1:1.3.dfsg+really1.3.1-1ubuntu3.2 [897 kB]
+Get:54 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 libpython3.14-dev amd64 3.14.4-1ubuntu0.2 [6109 kB]
+Get:55 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libp                                                                                                                              ython3-dev amd64 3.14.3-0ubuntu2 [8750 B]
+Get:56 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 manp                                                                                                                              ages-dev all 6.17-1 [2183 kB]
+Get:57 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 python3.14-dev amd64 3.14.4-1ubuntu0.2 [510 kB]
+Get:58 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 pyth                                                                                                                              on3-dev amd64 3.14.3-0ubuntu2 [26.6 kB]
+Get:59 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3                                                                                                                               python3-wheel all 0.46.3-2 [27.9 kB]
+Get:60 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3                                                                                                                               python3-pip all 25.1.1+dfsg-1ubuntu2 [1416 kB]
+Get:61 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3                                                                                                                               python3-pip-whl all 25.1.1+dfsg-1ubuntu2 [1430 kB]
+Get:62 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3                                                                                                                               python3-setuptools-whl all 78.1.1-0.1build1 [1174 kB]
+Get:63 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/universe                                                                                                                               amd64v3 python3.14-venv amd64 3.14.4-1ubuntu0.2 [5366 B]
+Get:64 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3                                                                                                                               python3-venv amd64 3.14.3-0ubuntu2 [1044 B]
+Get:65 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3                                                                                                                               ubuntu-fan all 0.12.17 [34.3 kB]
+Fetched 180 MB in 2s (103 MB/s)
+Extracting templates from packages: 100%
+Preconfiguring packages ...
+Selecting previously unselected package pigz.
+(Reading database ... 85359 files and directories currently installed.)
+Preparing to unpack .../00-pigz_2.8-1build1_amd64v3.deb ...
+Unpacking pigz (2.8-1build1) ...
+Selecting previously unselected package bridge-utils.
+Preparing to unpack .../01-bridge-utils_1.7.1-4ubuntu3_amd64v3.deb ...
+Unpacking bridge-utils (1.7.1-4ubuntu3) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../02-libc-dev-bin_2.43-2ubuntu2.7_amd64v3.deb ...
+Unpacking libc-dev-bin (2.43-2ubuntu2.7) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../03-linux-libc-dev_7.0.0-44.44_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (7.0.0-44.44) ...
+Selecting previously unselected package rpcsvc-proto.
+Preparing to unpack .../04-rpcsvc-proto_1.4.3-1build1_amd64v3.deb ...
+Unpacking rpcsvc-proto (1.4.3-1build1) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../05-libc6-dev_2.43-2ubuntu2.7_amd64v3.deb ...
+Unpacking libc6-dev:amd64 (2.43-2ubuntu2.7) ...
+Selecting previously unselected package gcc-15-base:amd64.
+Preparing to unpack .../06-gcc-15-base_15.2.0-16ubuntu1_amd64v3.deb ...
+Unpacking gcc-15-base:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package libisl23:amd64.
+Preparing to unpack .../07-libisl23_0.27-1build1_amd64v3.deb ...
+Unpacking libisl23:amd64 (0.27-1build1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../08-libmpc3_1.3.1-3_amd64v3.deb ...
+Unpacking libmpc3:amd64 (1.3.1-3) ...
+Selecting previously unselected package cpp-15-x86-64-linux-gnu.
+Preparing to unpack .../09-cpp-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64v3.deb                                                                                                                               ...
+Unpacking cpp-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package cpp-15.
+Preparing to unpack .../10-cpp-15_15.2.0-16ubuntu1_amd64v3.deb ...
+Unpacking cpp-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package cpp-x86-64-linux-gnu.
+Preparing to unpack .../11-cpp-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64v3.deb                                                                                                                               ...
+Unpacking cpp-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../12-cpp_4%3a15.2.0-5ubuntu1_amd64v3.deb ...
+Unpacking cpp (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../13-libcc1-0_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libcc1-0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../14-libgomp1_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../15-libitm1_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libitm1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libasan8:amd64.
+Preparing to unpack .../16-libasan8_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libasan8:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../17-liblsan0_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking liblsan0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libtsan2:amd64.
+Preparing to unpack .../18-libtsan2_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libtsan2:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../19-libubsan1_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libubsan1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libhwasan0:amd64.
+Preparing to unpack .../20-libhwasan0_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libhwasan0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../21-libquadmath0_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libquadmath0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libgcc-15-dev:amd64.
+Preparing to unpack .../22-libgcc-15-dev_15.2.0-16ubuntu1_amd64v3.deb ...
+Unpacking libgcc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-15-x86-64-linux-gnu.
+Preparing to unpack .../23-gcc-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64v3.deb                                                                                                                               ...
+Unpacking gcc-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-15.
+Preparing to unpack .../24-gcc-15_15.2.0-16ubuntu1_amd64v3.deb ...
+Unpacking gcc-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-x86-64-linux-gnu.
+Preparing to unpack .../25-gcc-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64v3.deb                                                                                                                               ...
+Unpacking gcc-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../26-gcc_4%3a15.2.0-5ubuntu1_amd64v3.deb ...
+Unpacking gcc (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libstdc++-15-dev:amd64.
+Preparing to unpack .../27-libstdc++-15-dev_15.2.0-16ubuntu1_amd64v3.deb ...
+Unpacking libstdc++-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-15-x86-64-linux-gnu.
+Preparing to unpack .../28-g++-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64v3.deb                                                                                                                               ...
+Unpacking g++-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-15.
+Preparing to unpack .../29-g++-15_15.2.0-16ubuntu1_amd64v3.deb ...
+Unpacking g++-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-x86-64-linux-gnu.
+Preparing to unpack .../30-g++-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64v3.deb                                                                                                                               ...
+Unpacking g++-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../31-g++_4%3a15.2.0-5ubuntu1_amd64v3.deb ...
+Unpacking g++ (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../32-make_4.4.1-3_amd64v3.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../33-libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package bzip2.
+Preparing to unpack .../34-bzip2_1.0.8-6ubuntu0.1_amd64v3.deb ...
+Unpacking bzip2 (1.0.8-6ubuntu0.1) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../35-lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../36-dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Selecting previously unselected package libcrypt-dev:amd64.
+Preparing to unpack .../37-libcrypt-dev_1%3a4.5.1-1_amd64v3.deb ...
+Unpacking libcrypt-dev:amd64 (1:4.5.1-1) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../38-build-essential_12.12ubuntu2.26.04.2_amd64v3.deb ...
+Unpacking build-essential (12.12ubuntu2.26.04.2) ...
+Selecting previously unselected package runc.
+Preparing to unpack .../39-runc_1.4.0-0ubuntu1_amd64v3.deb ...
+Unpacking runc (1.4.0-0ubuntu1) ...
+Selecting previously unselected package containerd.
+Preparing to unpack .../40-containerd_2.2.2-0ubuntu1.2_amd64v3.deb ...
+Unpacking containerd (2.2.2-0ubuntu1.2) ...
+Selecting previously unselected package dns-root-data.
+Preparing to unpack .../41-dns-root-data_2025080400build1_all.deb ...
+Unpacking dns-root-data (2025080400build1) ...
+Selecting previously unselected package dnsmasq-base.
+Preparing to unpack .../42-dnsmasq-base_2.92-1ubuntu0.5_amd64v3.deb ...
+Unpacking dnsmasq-base (2.92-1ubuntu0.5) ...
+Selecting previously unselected package docker-compose-v2.
+Preparing to unpack .../43-docker-compose-v2_2.40.3+ds1-0ubuntu1_amd64v3.deb ...
+Unpacking docker-compose-v2 (2.40.3+ds1-0ubuntu1) ...
+Selecting previously unselected package docker.io.
+Preparing to unpack .../44-docker.io_29.1.3-0ubuntu4.1_amd64v3.deb ...
+Unpacking docker.io (29.1.3-0ubuntu4.1) ...
+Selecting previously unselected package libfakeroot:amd64.
+Preparing to unpack .../45-libfakeroot_1.37.2-1_amd64v3.deb ...
+Unpacking libfakeroot:amd64 (1.37.2-1) ...
+Selecting previously unselected package fakeroot.
+Preparing to unpack .../46-fakeroot_1.37.2-1_amd64v3.deb ...
+Unpacking fakeroot (1.37.2-1) ...
+Selecting previously unselected package libalgorithm-diff-perl.
+Preparing to unpack .../47-libalgorithm-diff-perl_1.201-1_all.deb ...
+Unpacking libalgorithm-diff-perl (1.201-1) ...
+Selecting previously unselected package libalgorithm-diff-xs-perl.
+Preparing to unpack .../48-libalgorithm-diff-xs-perl_0.04-9_amd64v3.deb ...
+Unpacking libalgorithm-diff-xs-perl (0.04-9) ...
+Selecting previously unselected package libalgorithm-merge-perl.
+Preparing to unpack .../49-libalgorithm-merge-perl_0.08-5_all.deb ...
+Unpacking libalgorithm-merge-perl (0.08-5) ...
+Selecting previously unselected package libexpat1-dev:amd64.
+Preparing to unpack .../50-libexpat1-dev_2.7.4-1ubuntu0.2_amd64v3.deb ...
+Unpacking libexpat1-dev:amd64 (2.7.4-1ubuntu0.2) ...
+Selecting previously unselected package libfile-fcntllock-perl.
+Preparing to unpack .../51-libfile-fcntllock-perl_0.22-4ubuntu6_amd64v3.deb ...
+Unpacking libfile-fcntllock-perl (0.22-4ubuntu6) ...
+Selecting previously unselected package zlib1g-dev:amd64.
+Preparing to unpack .../52-zlib1g-dev_1%3a1.3.dfsg+really1.3.1-1ubuntu3.2_amd64v                                                                                                                              3.deb ...
+Unpacking zlib1g-dev:amd64 (1:1.3.dfsg+really1.3.1-1ubuntu3.2) ...
+Selecting previously unselected package libpython3.14-dev:amd64.
+Preparing to unpack .../53-libpython3.14-dev_3.14.4-1ubuntu0.2_amd64v3.deb ...
+Unpacking libpython3.14-dev:amd64 (3.14.4-1ubuntu0.2) ...
+Selecting previously unselected package libpython3-dev:amd64.
+Preparing to unpack .../54-libpython3-dev_3.14.3-0ubuntu2_amd64v3.deb ...
+Unpacking libpython3-dev:amd64 (3.14.3-0ubuntu2) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../55-manpages-dev_6.17-1_all.deb ...
+Unpacking manpages-dev (6.17-1) ...
+Selecting previously unselected package python3.14-dev.
+Preparing to unpack .../56-python3.14-dev_3.14.4-1ubuntu0.2_amd64v3.deb ...
+Unpacking python3.14-dev (3.14.4-1ubuntu0.2) ...
+Selecting previously unselected package python3-dev.
+Preparing to unpack .../57-python3-dev_3.14.3-0ubuntu2_amd64v3.deb ...
+Unpacking python3-dev (3.14.3-0ubuntu2) ...
+Selecting previously unselected package python3-wheel.
+Preparing to unpack .../58-python3-wheel_0.46.3-2_all.deb ...
+Unpacking python3-wheel (0.46.3-2) ...
+Selecting previously unselected package python3-pip.
+Preparing to unpack .../59-python3-pip_25.1.1+dfsg-1ubuntu2_all.deb ...
+Unpacking python3-pip (25.1.1+dfsg-1ubuntu2) ...
+Selecting previously unselected package python3-pip-whl.
+Preparing to unpack .../60-python3-pip-whl_25.1.1+dfsg-1ubuntu2_all.deb ...
+Unpacking python3-pip-whl (25.1.1+dfsg-1ubuntu2) ...
+Selecting previously unselected package python3-setuptools-whl.
+Preparing to unpack .../61-python3-setuptools-whl_78.1.1-0.1build1_all.deb ...
+Unpacking python3-setuptools-whl (78.1.1-0.1build1) ...
+Selecting previously unselected package python3.14-venv.
+Preparing to unpack .../62-python3.14-venv_3.14.4-1ubuntu0.2_amd64v3.deb ...
+Unpacking python3.14-venv (3.14.4-1ubuntu0.2) ...
+Selecting previously unselected package python3-venv.
+Preparing to unpack .../63-python3-venv_3.14.3-0ubuntu2_amd64v3.deb ...
+Unpacking python3-venv (3.14.3-0ubuntu2) ...
+Selecting previously unselected package ubuntu-fan.
+Preparing to unpack .../64-ubuntu-fan_0.12.17_all.deb ...
+Unpacking ubuntu-fan (0.12.17) ...
+Setting up manpages-dev (6.17-1) ...
+Setting up python3-setuptools-whl (78.1.1-0.1build1) ...
+Setting up lto-disabled-list (79) ...
+Setting up docker-compose-v2 (2.40.3+ds1-0ubuntu1) ...
+Setting up libfile-fcntllock-perl (0.22-4ubuntu6) ...
+Setting up python3-pip-whl (25.1.1+dfsg-1ubuntu2) ...
+Setting up libalgorithm-diff-perl (1.201-1) ...
+Setting up linux-libc-dev:amd64 (7.0.0-44.44) ...
+Setting up dnsmasq-base (2.92-1ubuntu0.5) ...
+Setting up libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Setting up bzip2 (1.0.8-6ubuntu0.1) ...
+Setting up python3-wheel (0.46.3-2) ...
+Setting up libfakeroot:amd64 (1.37.2-1) ...
+Setting up runc (1.4.0-0ubuntu1) ...
+Setting up python3.14-venv (3.14.4-1ubuntu0.2) ...
+Setting up dns-root-data (2025080400build1) ...
+Setting up fakeroot (1.37.2-1) ...
+update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (                                                                                                                              fakeroot) in auto mode
+Setting up rpcsvc-proto (1.4.3-1build1) ...
+Setting up python3-venv (3.14.3-0ubuntu2) ...
+Setting up make (4.4.1-3) ...
+Setting up libquadmath0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libmpc3:amd64 (1.3.1-3) ...
+Setting up python3-pip (25.1.1+dfsg-1ubuntu2) ...
+Setting up bridge-utils (1.7.1-4ubuntu3) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up libubsan1:amd64 (16-20260322-1ubuntu1) ...
+Setting up libhwasan0:amd64 (16-20260322-1ubuntu1) ...
+Setting up pigz (2.8-1build1) ...
+Setting up libcrypt-dev:amd64 (1:4.5.1-1) ...
+Setting up libasan8:amd64 (16-20260322-1ubuntu1) ...
+Setting up libtsan2:amd64 (16-20260322-1ubuntu1) ...
+Setting up libisl23:amd64 (0.27-1build1) ...
+Setting up libc-dev-bin (2.43-2ubuntu2.7) ...
+Setting up gcc-15-base:amd64 (15.2.0-16ubuntu1) ...
+Setting up containerd (2.2.2-0ubuntu1.2) ...
+Created symlink '/etc/systemd/system/multi-user.target.wants/containerd.service'                                                                                                                               → '/usr/lib/systemd/system/containerd.service'.
+Setting up libalgorithm-diff-xs-perl (0.04-9) ...
+Setting up libcc1-0:amd64 (16-20260322-1ubuntu1) ...
+Setting up liblsan0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libitm1:amd64 (16-20260322-1ubuntu1) ...
+Setting up libalgorithm-merge-perl (0.08-5) ...
+Setting up ubuntu-fan (0.12.17) ...
+Created symlink '/etc/systemd/system/multi-user.target.wants/ubuntu-fan.service'                                                                                                                               → '/usr/lib/systemd/system/ubuntu-fan.service'.
+Setting up libgcc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Setting up docker.io (29.1.3-0ubuntu4.1) ...
+Created symlink '/etc/systemd/system/multi-user.target.wants/docker.service' → '                                                                                                                              /usr/lib/systemd/system/docker.service'.
+Created symlink '/etc/systemd/system/sockets.target.wants/docker.socket' → '/usr                                                                                                                              /lib/systemd/system/docker.socket'.
+Setting up cpp-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Setting up gcc-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up cpp-15 (15.2.0-16ubuntu1) ...
+Setting up libc6-dev:amd64 (2.43-2ubuntu2.7) ...
+Setting up cpp-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up gcc-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up gcc-15 (15.2.0-16ubuntu1) ...
+Setting up libstdc++-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Setting up libexpat1-dev:amd64 (2.7.4-1ubuntu0.2) ...
+Setting up zlib1g-dev:amd64 (1:1.3.dfsg+really1.3.1-1ubuntu3.2) ...
+Setting up cpp (4:15.2.0-5ubuntu1) ...
+Setting up libpython3.14-dev:amd64 (3.14.4-1ubuntu0.2) ...
+Setting up g++-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up libpython3-dev:amd64 (3.14.3-0ubuntu2) ...
+Setting up python3.14-dev (3.14.4-1ubuntu0.2) ...
+Setting up gcc (4:15.2.0-5ubuntu1) ...
+Setting up python3-dev (3.14.3-0ubuntu2) ...
+Setting up g++-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up g++-15 (15.2.0-16ubuntu1) ...
+Setting up g++ (4:15.2.0-5ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mo                                                                                                                              de
+Setting up build-essential (12.12ubuntu2.26.04.2) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for dbus (1.16.2-2ubuntu4) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.7) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@ip-172-31-40-115:~$ sudo usermod -aG docker ubuntu
+ubuntu@ip-172-31-40-115:~$ docker --version
+Docker version 29.1.3, build 29.1.3-0ubuntu4.1
+ubuntu@ip-172-31-40-115:~$ docker compose version
+Docker Compose version 2.40.3+ds1-0ubuntu1
+ubuntu@ip-172-31-40-115:~$ git clone https://github.com/rubyal/dsa-proyecto.git
+Cloning into 'dsa-proyecto'...
+remote: Enumerating objects: 369, done.
+remote: Counting objects: 100% (369/369), done.
+remote: Compressing objects: 100% (288/288), done.
+remote: Total 369 (delta 121), reused 245 (delta 60), pack-reused 0 (from 0)
+Receiving objects: 100% (369/369), 2.75 MiB | 25.56 MiB/s, done.
+Resolving deltas: 100% (121/121), done.
+ubuntu@ip-172-31-40-115:~$ cd dsa-proyecto
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ git checkout dev
+branch 'dev' set up to track 'origin/dev'.
+Switched to a new branch 'dev'
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ pip3 install --break-system-packages dvc                                                                                                                               dvc-s3
+Defaulting to user installation because normal site-packages is not writeable
+Collecting dvc
+  Downloading dvc-3.67.1-py3-none-any.whl.metadata (17 kB)
+Collecting dvc-s3
+  Downloading dvc_s3-3.3.0-py3-none-any.whl.metadata (1.6 kB)
+Requirement already satisfied: attrs>=22.2.0 in /usr/lib/python3/dist-packages (                                                                                                                              from dvc) (25.4.0)
+Collecting celery (from dvc)
+  Downloading celery-5.7.0-py3-none-any.whl.metadata (23 kB)
+Collecting colorama>=0.3.9 (from dvc)
+  Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Requirement already satisfied: configobj>=5.0.9 in /usr/lib/python3/dist-package                                                                                                                              s (from dvc) (5.0.9)
+Requirement already satisfied: distro>=1.3 in /usr/lib/python3/dist-packages (fr                                                                                                                              om dvc) (1.9.0)
+Collecting dpath<3,>=2.1.0 (from dvc)
+  Downloading dpath-2.2.0-py3-none-any.whl.metadata (15 kB)
+Collecting dulwich (from dvc)
+  Downloading dulwich-1.2.21-cp314-cp314-manylinux_2_28_x86_64.whl.metadata (6.2                                                                                                                               kB)
+Collecting dvc-data<3.19.0,>=3.18.2 (from dvc)
+  Downloading dvc_data-3.18.3-py3-none-any.whl.metadata (4.9 kB)
+Collecting dvc-http>=2.29.0 (from dvc)
+  Downloading dvc_http-2.32.0-py3-none-any.whl.metadata (1.3 kB)
+Collecting dvc-objects (from dvc)
+  Downloading dvc_objects-5.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting dvc-render<2,>=1.0.1 (from dvc)
+  Downloading dvc_render-1.0.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting dvc-studio-client<1,>=0.21 (from dvc)
+  Downloading dvc_studio_client-0.23.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting dvc-task<1,>=0.3.0 (from dvc)
+  Downloading dvc_task-0.40.2-py3-none-any.whl.metadata (10.0 kB)
+Collecting flatten-dict<1,>=0.4.1 (from dvc)
+  Downloading flatten_dict-0.6.0-py3-none-any.whl.metadata (9.4 kB)
+Collecting flufl.lock<10,>=8.1.0 (from dvc)
+  Downloading flufl_lock-9.2.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting fsspec>=2024.2.0 (from dvc)
+  Downloading fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+Collecting funcy>=1.14 (from dvc)
+  Downloading funcy-2.1-py3-none-any.whl.metadata (6.3 kB)
+Collecting grandalf<1,>=0.7 (from dvc)
+  Downloading grandalf-0.8-py3-none-any.whl.metadata (1.7 kB)
+Collecting gto<2,>=1.6.0 (from dvc)
+  Downloading gto-1.10.1-py3-none-any.whl.metadata (4.8 kB)
+Collecting hydra-core>=1.1 (from dvc)
+  Downloading hydra_core-1.3.8-py3-none-any.whl.metadata (5.7 kB)
+Collecting iterative-telemetry>=0.0.7 (from dvc)
+  Downloading iterative_telemetry-0.0.10-py3-none-any.whl.metadata (4.1 kB)
+Collecting kombu (from dvc)
+  Downloading kombu-5.7.0-py3-none-any.whl.metadata (17 kB)
+Collecting networkx>=2.5 (from dvc)
+  Downloading networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+Collecting omegaconf (from dvc)
+  Downloading omegaconf-2.4.0-py3-none-any.whl.metadata (4.9 kB)
+Requirement already satisfied: packaging>=19 in /usr/lib/python3/dist-packages (                                                                                                                              from dvc) (26.0)
+Collecting pathspec<2,>=0.10.3 (from dvc)
+  Downloading pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+Collecting platformdirs<5,>=3.1.1 (from dvc)
+  Downloading platformdirs-4.14.8-py3-none-any.whl.metadata (5.7 kB)
+Collecting psutil>=5.8 (from dvc)
+  Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.                                                                                                                              manylinux_2_28_x86_64.whl.metadata (22 kB)
+Collecting pydot>=1.2.4 (from dvc)
+  Downloading pydot-4.0.1-py3-none-any.whl.metadata (11 kB)
+Collecting pygtrie>=2.3.2 (from dvc)
+  Downloading pygtrie-2.6.2-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: pyparsing>=3.0.0 in /usr/lib/python3/dist-package                                                                                                                              s (from dvc) (3.3.2)
+Requirement already satisfied: requests>=2.22 in /usr/lib/python3/dist-packages                                                                                                                               (from dvc) (2.32.5)
+Requirement already satisfied: rich>=12 in /usr/lib/python3/dist-packages (from                                                                                                                               dvc) (13.9.4)
+Collecting ruamel.yaml>=0.17.11 (from dvc)
+  Downloading ruamel_yaml-0.19.1-py3-none-any.whl.metadata (16 kB)
+Collecting scmrepo<4,>=3.5.2 (from dvc)
+  Downloading scmrepo-3.6.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting shortuuid>=0.5 (from dvc)
+  Downloading shortuuid-1.0.13-py3-none-any.whl.metadata (5.8 kB)
+Collecting shtab<2,>=1.3.4 (from dvc)
+  Downloading shtab-1.13.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting tabulate>=0.8.7 (from dvc)
+  Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)
+Collecting tomlkit>=0.11.1 (from dvc)
+  Downloading tomlkit-0.15.2-py3-none-any.whl.metadata (3.4 kB)
+Collecting tqdm<5,>=4.63.1 (from dvc)
+  Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+Collecting voluptuous>=0.11.7 (from dvc)
+  Downloading voluptuous-0.16.0-py3-none-any.whl.metadata (20 kB)
+Collecting zc.lockfile>=1.2.1 (from dvc)
+  Downloading zc_lockfile-4.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting dictdiffer>=0.8.1 (from dvc-data<3.19.0,>=3.18.2->dvc)
+  Downloading dictdiffer-0.10.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting diskcache>=5.2.1 (from dvc-data<3.19.0,>=3.18.2->dvc)
+  Downloading diskcache-5.6.3-py3-none-any.whl.metadata (20 kB)
+Collecting sqltrie<1,>=0.11.0 (from dvc-data<3.19.0,>=3.18.2->dvc)
+  Downloading sqltrie-0.11.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting orjson<4,>=3 (from dvc-data<3.19.0,>=3.18.2->dvc)
+  Downloading orjson-3.13.0-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_                                                                                                                              64.whl.metadata (42 kB)
+Collecting billiard>=4.3.2 (from celery->dvc)
+  Downloading billiard-4.3.2-py3-none-any.whl.metadata (5.0 kB)
+Collecting vine<6.0,>=5.1.0 (from celery->dvc)
+  Downloading vine-5.1.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting click<9.0,>=8.3.1 (from celery->dvc)
+  Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting click-didyoumean>=0.3.1 (from celery->dvc)
+  Downloading click_didyoumean-0.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting click-repl>=0.4.1 (from celery->dvc)
+  Downloading click_repl-0.4.1-py3-none-any.whl.metadata (3.7 kB)
+Collecting click-plugins>=1.1.1.2 (from celery->dvc)
+  Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+Collecting python-dateutil==2.9.0.post0 (from celery->dvc)
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting tzlocal (from celery->dvc)
+  Downloading tzlocal-5.4.5-py3-none-any.whl.metadata (7.7 kB)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from                                                                                                                               python-dateutil==2.9.0.post0->celery->dvc) (1.17.0)
+Collecting atpublic (from flufl.lock<10,login as: ubuntu
+Authenticating with public key "Imported-Openssh-Key"
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 • MobaXterm Personal Edition v23.2 •                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ⮞ SSH session to ubuntu@35.168.9.198                                 │
+    │   • Direct SSH      :  ✓                                             │
+    │   • SSH compression :  ✓                                             │
+    │   • SSH-browser     :  ✓                                             │
+    │   • X11-forwarding  :  ✓  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ⮞ For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Welcome to Ubuntu 26.04.1 LTS (GNU/Linux 7.0.0-1018-aws x86_64)
+
+ * Documentation:  https://docs.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Sun Nov 22 16:29:15 UTC 2026
+
+  System load:  0.27               Processes:             132
+  Usage of /:   10.8% of 18.25GB   Users logged in:       0
+  Memory usage: 7%                 IPv4 address for enX0: 172.31.40.115
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+/usr/bin/xauth:  file /home/ubuntu/.Xauthority does not exist
+ubuntu@ip-172-31-40-115:~$ sudo apt update && sudo apt upgrade -y
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates InRelease                                                                                                                               [137 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports InReleas                                                                                                                              e [137 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3 P                                                                                                                              ackages [16.3 MB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe Translati                                                                                                                              on-en [6329 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64 Com                                                                                                                              ponents [4556 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64 c-n                                                                                                                              -f Metadata [313 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/multiverse amd64v3                                                                                                                               Packages [291 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/multiverse Transl                                                                                                                              ation-en [127 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/multiverse amd64                                                                                                                               Components [50.0 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/multiverse amd64                                                                                                                               c-n-f Metadata [8276 B]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 Packages [902 kB]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4 Components [110 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/universe                                                                                                                               amd64v3 Packages [393 kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/universe                                                                                                                               Translation-en [124 kB]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/universe                                                                                                                               amd64 Components [201 kB]
+Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/universe                                                                                                                               amd64 c-n-f Metadata [4704 B]
+Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/multivers                                                                                                                              e amd64v3 Packages [21.1 kB]
+Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/multivers                                                                                                                              e Translation-en [4168 B]
+Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/multivers                                                                                                                              e amd64 Components [216 B]
+Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/multivers                                                                                                                              e amd64 c-n-f Metadata [256 B]
+Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/main am                                                                                                                              d64 Components [212 B]
+Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/main am                                                                                                                              d64 c-n-f Metadata [112 B]
+Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/univers                                                                                                                              e amd64v3 Packages [3144 B]
+Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/univers                                                                                                                              e Translation-en [7988 B]
+Get:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/univers                                                                                                                              e amd64 Components [1056 B]
+Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/univers                                                                                                                              e amd64 c-n-f Metadata [116 B]
+Get:29 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/restric                                                                                                                              ted amd64 Components [216 B]
+Get:30 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/restric                                                                                                                              ted amd64 c-n-f Metadata [120 B]
+Get:31 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/multive                                                                                                                              rse amd64 Components [216 B]
+Get:32 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-backports/multive                                                                                                                              rse amd64 c-n-f Metadata [120 B]
+Get:33 http://security.ubuntu.com/ubuntu resolute-security/main amd64v3 Packages                                                                                                                               [722 kB]
+Get:34 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components                                                                                                                               [46.7 kB]
+Get:35 http://security.ubuntu.com/ubuntu resolute-security/universe amd64v3 Pack                                                                                                                              ages [222 kB]
+Get:36 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-                                                                                                                              en [72.7 kB]
+Get:37 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Compon                                                                                                                              ents [62.8 kB]
+Get:38 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f                                                                                                                               Metadata [3552 B]
+Get:39 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64v3 Pa                                                                                                                              ckages [20.1 kB]
+Get:40 http://security.ubuntu.com/ubuntu resolute-security/multiverse Translatio                                                                                                                              n-en [3728 B]
+Get:41 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Comp                                                                                                                              onents [212 B]
+Get:42 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-                                                                                                                              f Metadata [120 B]
+Fetched 31.3 MB in 4s (8276 kB/s)
+All packages are up to date.
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 0
+ubuntu@ip-172-31-40-115:~$ sudo apt install -y docker.io docker-compose-v2 git p                                                                                                                              ython3-pip python3-venv
+git is already the newest version (1:2.53.0-1ubuntu1.1).
+git set to manually installed.
+Installing:
+  docker-compose-v2  docker.io  python3-pip  python3-venv
+
+Installing dependencies:
+  bridge-utils             libalgorithm-diff-perl     libquadmath0
+  build-essential          libalgorithm-diff-xs-perl  libstdc++-15-dev
+  bzip2                    libalgorithm-merge-perl    libtsan2
+  containerd               libasan8                   libubsan1
+  cpp                      libc-dev-bin               linux-libc-dev
+  cpp-15                   libc6-dev                  lto-disabled-list
+  cpp-15-x86-64-linux-gnu  libcc1-0                   make
+  cpp-x86-64-linux-gnu     libcrypt-dev               manpages-dev
+  dns-root-data            libdpkg-perl               pigz
+  dnsmasq-base             libexpat1-dev              python3-dev
+  dpkg-dev                 libfakeroot                python3-pip-whl
+  fakeroot                 libfile-fcntllock-perl     python3-setuptools-whl
+  g++                      libgcc-15-dev              python3-wheel
+  g++-15                   libgomp1                   python3.14-dev
+  g++-15-x86-64-linux-gnu  libhwasan0                 python3.14-venv
+  g++-x86-64-linux-gnu     libisl23                   rpcsvc-proto
+  gcc                      libitm1                    runc
+  gcc-15                   liblsan0                   ubuntu-fan
+  gcc-15-base              libmpc3                    zlib1g-dev
+  gcc-15-x86-64-linux-gnu  libpython3-dev
+  gcc-x86-64-linux-gnu     libpython3.14-dev
+
+Suggested packages:
+  ifupdown        rootlesskit                flex
+  bzip2-doc       zfs-fuse                   bison
+  cpp-doc         | zfsutils                 gdb
+  gcc-15-locales  debian-keyring             gcc-doc
+  cpp-15-doc      debian-tag2upload-keyring  gcc-15-multilib
+  aufs-tools      g++-multilib               gdb-x86-64-linux-gnu
+  cgroupfs-mount  g++-15-multilib            libc-devtools
+  | cgroup-lite   gcc-15-doc                 glibc-doc
+  debootstrap     gcc-multilib               bzr
+  docker-buildx   autoconf                   libstdc++-15-doc
+  docker-doc      automake                   make-doc
+  rinse           libtool
+
+Summary:
+  Upgrading: 0, Installing: 65, Removing: 0, Not Upgrading: 0
+  Download size: 180 MB
+  Space needed: 668 MB / 17.2 GB available
+
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3 p                                                                                                                              igz amd64 2.8-1build1 [68.5 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 bridg                                                                                                                              e-utils amd64 1.7.1-4ubuntu3 [34.8 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd64                                                                                                                              v3 libc-dev-bin amd64 2.43-2ubuntu2.7 [23.7 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd64                                                                                                                              v3 linux-libc-dev amd64 7.0.0-44.44 [1893 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 rpcsv                                                                                                                              c-proto amd64 1.4.3-1build1 [68.6 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd64                                                                                                                              v3 libc6-dev amd64 2.43-2ubuntu2.7 [2277 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 gcc-1                                                                                                                              5-base amd64 15.2.0-16ubuntu1 [39.1 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libis                                                                                                                              l23 amd64 0.27-1build1 [692 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libmp                                                                                                                              c3 amd64 1.3.1-3 [55.0 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 cpp-                                                                                                                              15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [13.0 MB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 cpp-                                                                                                                              15 amd64 15.2.0-16ubuntu1 [1044 B]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 cpp-                                                                                                                              x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [5852 B]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 cpp                                                                                                                               amd64 4:15.2.0-5ubuntu1 [22.4 kB]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libc                                                                                                                              c1-0 amd64 16-20260322-1ubuntu1 [53.8 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libg                                                                                                                              omp1 amd64 16-20260322-1ubuntu1 [163 kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libi                                                                                                                              tm1 amd64 16-20260322-1ubuntu1 [29.9 kB]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 liba                                                                                                                              san8 amd64 16-20260322-1ubuntu1 [3181 kB]
+Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libl                                                                                                                              san0 amd64 16-20260322-1ubuntu1 [1397 kB]
+Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libt                                                                                                                              san2 amd64 16-20260322-1ubuntu1 [2875 kB]
+Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libu                                                                                                                              bsan1 amd64 16-20260322-1ubuntu1 [1242 kB]
+Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libh                                                                                                                              wasan0 amd64 16-20260322-1ubuntu1 [1733 kB]
+Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libq                                                                                                                              uadmath0 amd64 16-20260322-1ubuntu1 [156 kB]
+Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libg                                                                                                                              cc-15-dev amd64 15.2.0-16ubuntu1 [2867 kB]
+Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 gcc-                                                                                                                              15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [25.6 MB]
+Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 gcc-                                                                                                                              15 amd64 15.2.0-16ubuntu1 [539 kB]
+Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 gcc-                                                                                                                              x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [1220 B]
+Get:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 gcc                                                                                                                               amd64 4:15.2.0-5ubuntu1 [5014 B]
+Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libs                                                                                                                              tdc++-15-dev amd64 15.2.0-16ubuntu1 [2928 kB]
+Get:29 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 g++-                                                                                                                              15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [14.5 MB]
+Get:30 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 g++-                                                                                                                              15 amd64 15.2.0-16ubuntu1 [26.8 kB]
+Get:31 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 g++-                                                                                                                              x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [980 B]
+Get:32 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 g++                                                                                                                               amd64 4:15.2.0-5ubuntu1 [1110 B]
+Get:33 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 make                                                                                                                               amd64 4.4.1-3 [197 kB]
+Get:34 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libd                                                                                                                              pkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:35 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 bzip2 amd64 1.0.8-6ubuntu0.1 [34.4 kB]
+Get:36 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 lto-                                                                                                                              disabled-list all 79 [14.2 kB]
+Get:37 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 dpkg                                                                                                                              -dev all 1.23.7ubuntu1 [1062 kB]
+Get:38 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libc                                                                                                                              rypt-dev amd64 1:4.5.1-1 [122 kB]
+Get:39 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 build-essential amd64 12.12ubuntu2.26.04.2 [5172 B]
+Get:40 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 runc                                                                                                                               amd64 1.4.0-0ubuntu1 [9829 kB]
+Get:41 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 containerd amd64 2.2.2-0ubuntu1.2 [28.1 MB]
+Get:42 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 dns-                                                                                                                              root-data all 2025080400build1 [6022 B]
+Get:43 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 dnsmasq-base amd64 2.92-1ubuntu0.5 [441 kB]
+Get:44 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3                                                                                                                               docker-compose-v2 amd64 2.40.3+ds1-0ubuntu1 [14.8 MB]
+Get:45 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/universe                                                                                                                               amd64v3 docker.io amd64 29.1.3-0ubuntu4.1 [35.5 MB]
+Get:46 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libf                                                                                                                              akeroot amd64 1.37.2-1 [34.0 kB]
+Get:47 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 fake                                                                                                                              root amd64 1.37.2-1 [68.8 kB]
+Get:48 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 liba                                                                                                                              lgorithm-diff-perl all 1.201-1 [41.8 kB]
+Get:49 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 liba                                                                                                                              lgorithm-diff-xs-perl amd64 0.04-9 [11.3 kB]
+Get:50 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 liba                                                                                                                              lgorithm-merge-perl all 0.08-5 [11.4 kB]
+Get:51 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 libexpat1-dev amd64 2.7.4-1ubuntu0.2 [149 kB]
+Get:52 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libf                                                                                                                              ile-fcntllock-perl amd64 0.22-4ubuntu6 [32.8 kB]
+Get:53 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 zlib1g-dev amd64 1:1.3.dfsg+really1.3.1-1ubuntu3.2 [897 kB]
+Get:54 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 libpython3.14-dev amd64 3.14.4-1ubuntu0.2 [6109 kB]
+Get:55 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 libp                                                                                                                              ython3-dev amd64 3.14.3-0ubuntu2 [8750 B]
+Get:56 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 manp                                                                                                                              ages-dev all 6.17-1 [2183 kB]
+Get:57 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd6                                                                                                                              4v3 python3.14-dev amd64 3.14.4-1ubuntu0.2 [510 kB]
+Get:58 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 pyth                                                                                                                              on3-dev amd64 3.14.3-0ubuntu2 [26.6 kB]
+Get:59 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3                                                                                                                               python3-wheel all 0.46.3-2 [27.9 kB]
+Get:60 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3                                                                                                                               python3-pip all 25.1.1+dfsg-1ubuntu2 [1416 kB]
+Get:61 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3                                                                                                                               python3-pip-whl all 25.1.1+dfsg-1ubuntu2 [1430 kB]
+Get:62 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3                                                                                                                               python3-setuptools-whl all 78.1.1-0.1build1 [1174 kB]
+Get:63 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute-updates/universe                                                                                                                               amd64v3 python3.14-venv amd64 3.14.4-1ubuntu0.2 [5366 B]
+Get:64 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3                                                                                                                               python3-venv amd64 3.14.3-0ubuntu2 [1044 B]
+Get:65 http://us-east-1.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3                                                                                                                               ubuntu-fan all 0.12.17 [34.3 kB]
+Fetched 180 MB in 2s (103 MB/s)
+Extracting templates from packages: 100%
+Preconfiguring packages ...
+Selecting previously unselected package pigz.
+(Reading database ... 85359 files and directories currently installed.)
+Preparing to unpack .../00-pigz_2.8-1build1_amd64v3.deb ...
+Unpacking pigz (2.8-1build1) ...
+Selecting previously unselected package bridge-utils.
+Preparing to unpack .../01-bridge-utils_1.7.1-4ubuntu3_amd64v3.deb ...
+Unpacking bridge-utils (1.7.1-4ubuntu3) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../02-libc-dev-bin_2.43-2ubuntu2.7_amd64v3.deb ...
+Unpacking libc-dev-bin (2.43-2ubuntu2.7) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../03-linux-libc-dev_7.0.0-44.44_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (7.0.0-44.44) ...
+Selecting previously unselected package rpcsvc-proto.
+Preparing to unpack .../04-rpcsvc-proto_1.4.3-1build1_amd64v3.deb ...
+Unpacking rpcsvc-proto (1.4.3-1build1) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../05-libc6-dev_2.43-2ubuntu2.7_amd64v3.deb ...
+Unpacking libc6-dev:amd64 (2.43-2ubuntu2.7) ...
+Selecting previously unselected package gcc-15-base:amd64.
+Preparing to unpack .../06-gcc-15-base_15.2.0-16ubuntu1_amd64v3.deb ...
+Unpacking gcc-15-base:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package libisl23:amd64.
+Preparing to unpack .../07-libisl23_0.27-1build1_amd64v3.deb ...
+Unpacking libisl23:amd64 (0.27-1build1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../08-libmpc3_1.3.1-3_amd64v3.deb ...
+Unpacking libmpc3:amd64 (1.3.1-3) ...
+Selecting previously unselected package cpp-15-x86-64-linux-gnu.
+Preparing to unpack .../09-cpp-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64v3.deb                                                                                                                               ...
+Unpacking cpp-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package cpp-15.
+Preparing to unpack .../10-cpp-15_15.2.0-16ubuntu1_amd64v3.deb ...
+Unpacking cpp-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package cpp-x86-64-linux-gnu.
+Preparing to unpack .../11-cpp-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64v3.deb                                                                                                                               ...
+Unpacking cpp-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../12-cpp_4%3a15.2.0-5ubuntu1_amd64v3.deb ...
+Unpacking cpp (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../13-libcc1-0_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libcc1-0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../14-libgomp1_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../15-libitm1_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libitm1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libasan8:amd64.
+Preparing to unpack .../16-libasan8_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libasan8:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../17-liblsan0_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking liblsan0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libtsan2:amd64.
+Preparing to unpack .../18-libtsan2_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libtsan2:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../19-libubsan1_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libubsan1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libhwasan0:amd64.
+Preparing to unpack .../20-libhwasan0_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libhwasan0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../21-libquadmath0_16-20260322-1ubuntu1_amd64v3.deb ...
+Unpacking libquadmath0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libgcc-15-dev:amd64.
+Preparing to unpack .../22-libgcc-15-dev_15.2.0-16ubuntu1_amd64v3.deb ...
+Unpacking libgcc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-15-x86-64-linux-gnu.
+Preparing to unpack .../23-gcc-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64v3.deb                                                                                                                               ...
+Unpacking gcc-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-15.
+Preparing to unpack .../24-gcc-15_15.2.0-16ubuntu1_amd64v3.deb ...
+Unpacking gcc-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-x86-64-linux-gnu.
+Preparing to unpack .../25-gcc-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64v3.deb                                                                                                                               ...
+Unpacking gcc-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../26-gcc_4%3a15.2.0-5ubuntu1_amd64v3.deb ...
+Unpacking gcc (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libstdc++-15-dev:amd64.
+Preparing to unpack .../27-libstdc++-15-dev_15.2.0-16ubuntu1_amd64v3.deb ...
+Unpacking libstdc++-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-15-x86-64-linux-gnu.
+Preparing to unpack .../28-g++-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64v3.deb                                                                                                                               ...
+Unpacking g++-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-15.
+Preparing to unpack .../29-g++-15_15.2.0-16ubuntu1_amd64v3.deb ...
+Unpacking g++-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-x86-64-linux-gnu.
+Preparing to unpack .../30-g++-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64v3.deb                                                                                                                               ...
+Unpacking g++-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../31-g++_4%3a15.2.0-5ubuntu1_amd64v3.deb ...
+Unpacking g++ (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../32-make_4.4.1-3_amd64v3.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../33-libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package bzip2.
+Preparing to unpack .../34-bzip2_1.0.8-6ubuntu0.1_amd64v3.deb ...
+Unpacking bzip2 (1.0.8-6ubuntu0.1) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../35-lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../36-dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Selecting previously unselected package libcrypt-dev:amd64.
+Preparing to unpack .../37-libcrypt-dev_1%3a4.5.1-1_amd64v3.deb ...
+Unpacking libcrypt-dev:amd64 (1:4.5.1-1) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../38-build-essential_12.12ubuntu2.26.04.2_amd64v3.deb ...
+Unpacking build-essential (12.12ubuntu2.26.04.2) ...
+Selecting previously unselected package runc.
+Preparing to unpack .../39-runc_1.4.0-0ubuntu1_amd64v3.deb ...
+Unpacking runc (1.4.0-0ubuntu1) ...
+Selecting previously unselected package containerd.
+Preparing to unpack .../40-containerd_2.2.2-0ubuntu1.2_amd64v3.deb ...
+Unpacking containerd (2.2.2-0ubuntu1.2) ...
+Selecting previously unselected package dns-root-data.
+Preparing to unpack .../41-dns-root-data_2025080400build1_all.deb ...
+Unpacking dns-root-data (2025080400build1) ...
+Selecting previously unselected package dnsmasq-base.
+Preparing to unpack .../42-dnsmasq-base_2.92-1ubuntu0.5_amd64v3.deb ...
+Unpacking dnsmasq-base (2.92-1ubuntu0.5) ...
+Selecting previously unselected package docker-compose-v2.
+Preparing to unpack .../43-docker-compose-v2_2.40.3+ds1-0ubuntu1_amd64v3.deb ...
+Unpacking docker-compose-v2 (2.40.3+ds1-0ubuntu1) ...
+Selecting previously unselected package docker.io.
+Preparing to unpack .../44-docker.io_29.1.3-0ubuntu4.1_amd64v3.deb ...
+Unpacking docker.io (29.1.3-0ubuntu4.1) ...
+Selecting previously unselected package libfakeroot:amd64.
+Preparing to unpack .../45-libfakeroot_1.37.2-1_amd64v3.deb ...
+Unpacking libfakeroot:amd64 (1.37.2-1) ...
+Selecting previously unselected package fakeroot.
+Preparing to unpack .../46-fakeroot_1.37.2-1_amd64v3.deb ...
+Unpacking fakeroot (1.37.2-1) ...
+Selecting previously unselected package libalgorithm-diff-perl.
+Preparing to unpack .../47-libalgorithm-diff-perl_1.201-1_all.deb ...
+Unpacking libalgorithm-diff-perl (1.201-1) ...
+Selecting previously unselected package libalgorithm-diff-xs-perl.
+Preparing to unpack .../48-libalgorithm-diff-xs-perl_0.04-9_amd64v3.deb ...
+Unpacking libalgorithm-diff-xs-perl (0.04-9) ...
+Selecting previously unselected package libalgorithm-merge-perl.
+Preparing to unpack .../49-libalgorithm-merge-perl_0.08-5_all.deb ...
+Unpacking libalgorithm-merge-perl (0.08-5) ...
+Selecting previously unselected package libexpat1-dev:amd64.
+Preparing to unpack .../50-libexpat1-dev_2.7.4-1ubuntu0.2_amd64v3.deb ...
+Unpacking libexpat1-dev:amd64 (2.7.4-1ubuntu0.2) ...
+Selecting previously unselected package libfile-fcntllock-perl.
+Preparing to unpack .../51-libfile-fcntllock-perl_0.22-4ubuntu6_amd64v3.deb ...
+Unpacking libfile-fcntllock-perl (0.22-4ubuntu6) ...
+Selecting previously unselected package zlib1g-dev:amd64.
+Preparing to unpack .../52-zlib1g-dev_1%3a1.3.dfsg+really1.3.1-1ubuntu3.2_amd64v                                                                                                                              3.deb ...
+Unpacking zlib1g-dev:amd64 (1:1.3.dfsg+really1.3.1-1ubuntu3.2) ...
+Selecting previously unselected package libpython3.14-dev:amd64.
+Preparing to unpack .../53-libpython3.14-dev_3.14.4-1ubuntu0.2_amd64v3.deb ...
+Unpacking libpython3.14-dev:amd64 (3.14.4-1ubuntu0.2) ...
+Selecting previously unselected package libpython3-dev:amd64.
+Preparing to unpack .../54-libpython3-dev_3.14.3-0ubuntu2_amd64v3.deb ...
+Unpacking libpython3-dev:amd64 (3.14.3-0ubuntu2) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../55-manpages-dev_6.17-1_all.deb ...
+Unpacking manpages-dev (6.17-1) ...
+Selecting previously unselected package python3.14-dev.
+Preparing to unpack .../56-python3.14-dev_3.14.4-1ubuntu0.2_amd64v3.deb ...
+Unpacking python3.14-dev (3.14.4-1ubuntu0.2) ...
+Selecting previously unselected package python3-dev.
+Preparing to unpack .../57-python3-dev_3.14.3-0ubuntu2_amd64v3.deb ...
+Unpacking python3-dev (3.14.3-0ubuntu2) ...
+Selecting previously unselected package python3-wheel.
+Preparing to unpack .../58-python3-wheel_0.46.3-2_all.deb ...
+Unpacking python3-wheel (0.46.3-2) ...
+Selecting previously unselected package python3-pip.
+Preparing to unpack .../59-python3-pip_25.1.1+dfsg-1ubuntu2_all.deb ...
+Unpacking python3-pip (25.1.1+dfsg-1ubuntu2) ...
+Selecting previously unselected package python3-pip-whl.
+Preparing to unpack .../60-python3-pip-whl_25.1.1+dfsg-1ubuntu2_all.deb ...
+Unpacking python3-pip-whl (25.1.1+dfsg-1ubuntu2) ...
+Selecting previously unselected package python3-setuptools-whl.
+Preparing to unpack .../61-python3-setuptools-whl_78.1.1-0.1build1_all.deb ...
+Unpacking python3-setuptools-whl (78.1.1-0.1build1) ...
+Selecting previously unselected package python3.14-venv.
+Preparing to unpack .../62-python3.14-venv_3.14.4-1ubuntu0.2_amd64v3.deb ...
+Unpacking python3.14-venv (3.14.4-1ubuntu0.2) ...
+Selecting previously unselected package python3-venv.
+Preparing to unpack .../63-python3-venv_3.14.3-0ubuntu2_amd64v3.deb ...
+Unpacking python3-venv (3.14.3-0ubuntu2) ...
+Selecting previously unselected package ubuntu-fan.
+Preparing to unpack .../64-ubuntu-fan_0.12.17_all.deb ...
+Unpacking ubuntu-fan (0.12.17) ...
+Setting up manpages-dev (6.17-1) ...
+Setting up python3-setuptools-whl (78.1.1-0.1build1) ...
+Setting up lto-disabled-list (79) ...
+Setting up docker-compose-v2 (2.40.3+ds1-0ubuntu1) ...
+Setting up libfile-fcntllock-perl (0.22-4ubuntu6) ...
+Setting up python3-pip-whl (25.1.1+dfsg-1ubuntu2) ...
+Setting up libalgorithm-diff-perl (1.201-1) ...
+Setting up linux-libc-dev:amd64 (7.0.0-44.44) ...
+Setting up dnsmasq-base (2.92-1ubuntu0.5) ...
+Setting up libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Setting up bzip2 (1.0.8-6ubuntu0.1) ...
+Setting up python3-wheel (0.46.3-2) ...
+Setting up libfakeroot:amd64 (1.37.2-1) ...
+Setting up runc (1.4.0-0ubuntu1) ...
+Setting up python3.14-venv (3.14.4-1ubuntu0.2) ...
+Setting up dns-root-data (2025080400build1) ...
+Setting up fakeroot (1.37.2-1) ...
+update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (                                                                                                                              fakeroot) in auto mode
+Setting up rpcsvc-proto (1.4.3-1build1) ...
+Setting up python3-venv (3.14.3-0ubuntu2) ...
+Setting up make (4.4.1-3) ...
+Setting up libquadmath0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libmpc3:amd64 (1.3.1-3) ...
+Setting up python3-pip (25.1.1+dfsg-1ubuntu2) ...
+Setting up bridge-utils (1.7.1-4ubuntu3) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up libubsan1:amd64 (16-20260322-1ubuntu1) ...
+Setting up libhwasan0:amd64 (16-20260322-1ubuntu1) ...
+Setting up pigz (2.8-1build1) ...
+Setting up libcrypt-dev:amd64 (1:4.5.1-1) ...
+Setting up libasan8:amd64 (16-20260322-1ubuntu1) ...
+Setting up libtsan2:amd64 (16-20260322-1ubuntu1) ...
+Setting up libisl23:amd64 (0.27-1build1) ...
+Setting up libc-dev-bin (2.43-2ubuntu2.7) ...
+Setting up gcc-15-base:amd64 (15.2.0-16ubuntu1) ...
+Setting up containerd (2.2.2-0ubuntu1.2) ...
+Created symlink '/etc/systemd/system/multi-user.target.wants/containerd.service'                                                                                                                               → '/usr/lib/systemd/system/containerd.service'.
+Setting up libalgorithm-diff-xs-perl (0.04-9) ...
+Setting up libcc1-0:amd64 (16-20260322-1ubuntu1) ...
+Setting up liblsan0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libitm1:amd64 (16-20260322-1ubuntu1) ...
+Setting up libalgorithm-merge-perl (0.08-5) ...
+Setting up ubuntu-fan (0.12.17) ...
+Created symlink '/etc/systemd/system/multi-user.target.wants/ubuntu-fan.service'                                                                                                                               → '/usr/lib/systemd/system/ubuntu-fan.service'.
+Setting up libgcc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Setting up docker.io (29.1.3-0ubuntu4.1) ...
+Created symlink '/etc/systemd/system/multi-user.target.wants/docker.service' → '                                                                                                                              /usr/lib/systemd/system/docker.service'.
+Created symlink '/etc/systemd/system/sockets.target.wants/docker.socket' → '/usr                                                                                                                              /lib/systemd/system/docker.socket'.
+Setting up cpp-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Setting up gcc-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up cpp-15 (15.2.0-16ubuntu1) ...
+Setting up libc6-dev:amd64 (2.43-2ubuntu2.7) ...
+Setting up cpp-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up gcc-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up gcc-15 (15.2.0-16ubuntu1) ...
+Setting up libstdc++-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Setting up libexpat1-dev:amd64 (2.7.4-1ubuntu0.2) ...
+Setting up zlib1g-dev:amd64 (1:1.3.dfsg+really1.3.1-1ubuntu3.2) ...
+Setting up cpp (4:15.2.0-5ubuntu1) ...
+Setting up libpython3.14-dev:amd64 (3.14.4-1ubuntu0.2) ...
+Setting up g++-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up libpython3-dev:amd64 (3.14.3-0ubuntu2) ...
+Setting up python3.14-dev (3.14.4-1ubuntu0.2) ...
+Setting up gcc (4:15.2.0-5ubuntu1) ...
+Setting up python3-dev (3.14.3-0ubuntu2) ...
+Setting up g++-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up g++-15 (15.2.0-16ubuntu1) ...
+Setting up g++ (4:15.2.0-5ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mo                                                                                                                              de
+Setting up build-essential (12.12ubuntu2.26.04.2) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for dbus (1.16.2-2ubuntu4) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.7) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@ip-172-31-40-115:~$ sudo usermod -aG docker ubuntu
+ubuntu@ip-172-31-40-115:~$ docker --version
+Docker version 29.1.3, build 29.1.3-0ubuntu4.1
+ubuntu@ip-172-31-40-115:~$ docker compose version
+Docker Compose version 2.40.3+ds1-0ubuntu1
+ubuntu@ip-172-31-40-115:~$ git clone https://github.com/rubyal/dsa-proyecto.git
+Cloning into 'dsa-proyecto'...
+remote: Enumerating objects: 369, done.
+remote: Counting objects: 100% (369/369), done.
+remote: Compressing objects: 100% (288/288), done.
+remote: Total 369 (delta 121), reused 245 (delta 60), pack-reused 0 (from 0)
+Receiving objects: 100% (369/369), 2.75 MiB | 25.56 MiB/s, done.
+Resolving deltas: 100% (121/121), done.
+ubuntu@ip-172-31-40-115:~$ cd dsa-proyecto
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ git checkout dev
+branch 'dev' set up to track 'origin/dev'.
+Switched to a new branch 'dev'
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ pip3 install --break-system-packages dvc                                                                                                                               dvc-s3
+Defaulting to user installation because normal site-packages is not writeable
+Collecting dvc
+  Downloading dvc-3.67.1-py3-none-any.whl.metadata (17 kB)
+Collecting dvc-s3
+  Downloading dvc_s3-3.3.0-py3-none-any.whl.metadata (1.6 kB)
+Requirement already satisfied: attrs>=22.2.0 in /usr/lib/python3/dist-packages (                                                                                                                              from dvc) (25.4.0)
+Collecting celery (from dvc)
+  Downloading celery-5.7.0-py3-none-any.whl.metadata (23 kB)
+Collecting colorama>=0.3.9 (from dvc)
+  Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Requirement already satisfied: configobj>=5.0.9 in /usr/lib/python3/dist-package                                                                                                                              s (from dvc) (5.0.9)
+Requirement already satisfied: distro>=1.3 in /usr/lib/python3/dist-packages (fr                                                                                                                              om dvc) (1.9.0)
+Collecting dpath<3,>=2.1.0 (from dvc)
+  Downloading dpath-2.2.0-py3-none-any.whl.metadata (15 kB)
+Collecting dulwich (from dvc)
+  Downloading dulwich-1.2.21-cp314-cp314-manylinux_2_28_x86_64.whl.metadata (6.2                                                                                                                               kB)
+Collecting dvc-data<3.19.0,>=3.18.2 (from dvc)
+  Downloading dvc_data-3.18.3-py3-none-any.whl.metadata (4.9 kB)
+Collecting dvc-http>=2.29.0 (from dvc)
+  Downloading dvc_http-2.32.0-py3-none-any.whl.metadata (1.3 kB)
+Collecting dvc-objects (from dvc)
+  Downloading dvc_objects-5.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting dvc-render<2,>=1.0.1 (from dvc)
+  Downloading dvc_render-1.0.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting dvc-studio-client<1,>=0.21 (from dvc)
+  Downloading dvc_studio_client-0.23.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting dvc-task<1,>=0.3.0 (from dvc)
+  Downloading dvc_task-0.40.2-py3-none-any.whl.metadata (10.0 kB)
+Collecting flatten-dict<1,>=0.4.1 (from dvc)
+  Downloading flatten_dict-0.6.0-py3-none-any.whl.metadata (9.4 kB)
+Collecting flufl.lock<10,>=8.1.0 (from dvc)
+  Downloading flufl_lock-9.2.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting fsspec>=2024.2.0 (from dvc)
+  Downloading fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+Collecting funcy>=1.14 (from dvc)
+  Downloading funcy-2.1-py3-none-any.whl.metadata (6.3 kB)
+Collecting grandalf<1,>=0.7 (from dvc)
+  Downloading grandalf-0.8-py3-none-any.whl.metadata (1.7 kB)
+Collecting gto<2,>=1.6.0 (from dvc)
+  Downloading gto-1.10.1-py3-none-any.whl.metadata (4.8 kB)
+Collecting hydra-core>=1.1 (from dvc)
+  Downloading hydra_core-1.3.8-py3-none-any.whl.metadata (5.7 kB)
+Collecting iterative-telemetry>=0.0.7 (from dvc)
+  Downloading iterative_telemetry-0.0.10-py3-none-any.whl.metadata (4.1 kB)
+Collecting kombu (from dvc)
+  Downloading kombu-5.7.0-py3-none-any.whl.metadata (17 kB)
+Collecting networkx>=2.5 (from dvc)
+  Downloading networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+Collecting omegaconf (from dvc)
+  Downloading omegaconf-2.4.0-py3-none-any.whl.metadata (4.9 kB)
+Requirement already satisfied: packaging>=19 in /usr/lib/python3/dist-packages (                                                                                                                              from dvc) (26.0)
+Collecting pathspec<2,>=0.10.3 (from dvc)
+  Downloading pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+Collecting platformdirs<5,>=3.1.1 (from dvc)
+  Downloading platformdirs-4.14.8-py3-none-any.whl.metadata (5.7 kB)
+Collecting psutil>=5.8 (from dvc)
+  Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.                                                                                                                              manylinux_2_28_x86_64.whl.metadata (22 kB)
+Collecting pydot>=1.2.4 (from dvc)
+  Downloading pydot-4.0.1-py3-none-any.whl.metadata (11 kB)
+Collecting pygtrie>=2.3.2 (from dvc)
+  Downloading pygtrie-2.6.2-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: pyparsing>=3.0.0 in /usr/lib/python3/dist-package                                                                                                                              s (from dvc) (3.3.2)
+Requirement already satisfied: requests>=2.22 in /usr/lib/python3/dist-packages                                                                                                                               (from dvc) (2.32.5)
+Requirement already satisfied: rich>=12 in /usr/lib/python3/dist-packages (from                                                                                                                               dvc) (13.9.4)
+Collecting ruamel.yaml>=0.17.11 (from dvc)
+  Downloading ruamel_yaml-0.19.1-py3-none-any.whl.metadata (16 kB)
+Collecting scmrepo<4,>=3.5.2 (from dvc)
+  Downloading scmrepo-3.6.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting shortuuid>=0.5 (from dvc)
+  Downloading shortuuid-1.0.13-py3-none-any.whl.metadata (5.8 kB)
+Collecting shtab<2,>=1.3.4 (from dvc)
+  Downloading shtab-1.13.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting tabulate>=0.8.7 (from dvc)
+  Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)
+Collecting tomlkit>=0.11.1 (from dvc)
+  Downloading tomlkit-0.15.2-py3-none-any.whl.metadata (3.4 kB)
+Collecting tqdm<5,>=4.63.1 (from dvc)
+  Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+Collecting voluptuous>=0.11.7 (from dvc)
+  Downloading voluptuous-0.16.0-py3-none-any.whl.metadata (20 kB)
+Collecting zc.lockfile>=1.2.1 (from dvc)
+  Downloading zc_lockfile-4.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting dictdiffer>=0.8.1 (from dvc-data<3.19.0,>=3.18.2->dvc)
+  Downloading dictdiffer-0.10.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting diskcache>=5.2.1 (from dvc-data<3.19.0,>=3.18.2->dvc)
+  Downloading diskcache-5.6.3-py3-none-any.whl.metadata (20 kB)
+Collecting sqltrie<1,>=0.11.0 (from dvc-data<3.19.0,>=3.18.2->dvc)
+  Downloading sqltrie-0.11.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting orjson<4,>=3 (from dvc-data<3.19.0,>=3.18.2->dvc)
+  Downloading orjson-3.13.0-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_                                                                                                                              64.whl.metadata (42 kB)
+Collecting billiard>=4.3.2 (from celery->dvc)
+  Downloading billiard-4.3.2-py3-none-any.whl.metadata (5.0 kB)
+Collecting vine<6.0,>=5.1.0 (from celery->dvc)
+  Downloading vine-5.1.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting click<9.0,>=8.3.1 (from celery->dvc)
+  Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting click-didyoumean>=0.3.1 (from celery->dvc)
+  Downloading click_didyoumean-0.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting click-repl>=0.4.1 (from celery->dvc)
+  Downloading click_repl-0.4.1-py3-none-any.whl.metadata (3.7 kB)
+Collecting click-plugins>=1.1.1.2 (from celery->dvc)
+  Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+Collecting python-dateutil==2.9.0.post0 (from celery->dvc)
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting tzlocal (from celery->dvc)
+  Downloading tzlocal-5.4.5-py3-none-any.whl.metadata (7.7 kB)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from                                                                                                                               python-dateutil==2.9.0.post0->celery->dvc) (1.17.0)
+Collecting atpublic (from flufl.lock<10,>=8.1.0->dvc)
+  Downloading atpublic-9.0.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting entrypoints (from gto<2,>=1.6.0->dvc)
+  Downloading entrypoints-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting pydantic>=2 (from gto<2,>=1.6.0->dvc)
+  Downloading pydantic-2.14.4-py3-none-any.whl.metadata (143 kB)
+Collecting pydantic-settings>=2 (from gto<2,>=1.6.0->dvc)
+  Downloading pydantic_settings-2.16.3-py3-none-any.whl.metadata (4.0 kB)
+Collecting semver>=2.13.0 (from gto<2,>=1.6.0->dvc)
+  Downloading semver-3.1.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting amqp>=5.4.2 (from kombu->dvc)
+  Downloading amqp-5.4.2-py3-none-any.whl.metadata (9.4 kB)
+Collecting gitpython>3 (from scmrepo<4,>=3.5.2->dvc)
+  Downloading gitpython-3.2.1-py3-none-any.whl.metadata (13 kB)
+Collecting pygit2>=1.14.0 (from scmrepo<4,>=3.5.2->dvc)
+  Downloading pygit2-1.21.0-cp314-cp314-manylinux_2_26_x86_64.manylinux_2_28_x86                                                                                                                              _64.whl.metadata (3.7 kB)
+Collecting asyncssh<3,>=2.13.1 (from scmrepo<4,>=3.5.2->dvc)
+  Downloading asyncssh-2.24.1-py3-none-any.whl.metadata (9.8 kB)
+Collecting aiohttp-retry>=2.5.0 (from scmrepo<4,>=3.5.2->dvc)
+  Downloading aiohttp_retry-2.9.1-py3-none-any.whl.metadata (8.8 kB)
+Collecting cryptography>=48.0.1 (from asyncssh<3,>=2.13.1->scmrepo<4,>=3.5.2->dv                                                                                                                              c)
+  Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata                                                                                                                               (4.4 kB)
+Requirement already satisfied: typing_extensions>=4.0.0 in /usr/lib/python3/dist                                                                                                                              -packages (from asyncssh<3,>=2.13.1->scmrepo<4,>=3.5.2->dvc) (4.15.0)
+Requirement already satisfied: urllib3>=2.2.2 in /usr/lib/python3/dist-packages                                                                                                                               (from dulwich->dvc) (2.6.3)
+Collecting s3fs>=2024.12.0 (from dvc-s3)
+  Downloading s3fs-2026.9.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting aiobotocore>=2.5.0 (from dvc-s3)
+  Downloading aiobotocore-3.10.0-py3-none-any.whl.metadata (32 kB)
+Requirement already satisfied: botocore in /usr/lib/python3/dist-packages (from                                                                                                                               dvc-s3) (1.40.72)
+Collecting aiohttp<4.0.0,>=3.14.0 (from aiobotocore>=2.5.0->dvc-s3)
+  Downloading aiohttp-3.14.5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86                                                                                                                              _64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+Collecting aioitertools<1.0.0,>=0.5.1 (from aiobotocore>=2.5.0->dvc-s3)
+  Downloading aioitertools-0.13.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting botocore (from dvc-s3)
+  Downloading botocore-1.43.117-py3-none-any.whl.metadata (5.6 kB)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /usr/lib/python3/dist-p                                                                                                                              ackages (from aiobotocore>=2.5.0->dvc-s3) (1.0.1)
+Collecting multidict<8.0.0,>=6.0.0 (from aiobotocore>=2.5.0->dvc-s3)
+  Downloading multidict-7.2.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x8                                                                                                                              6_64.manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+Collecting wrapt<3.0.0,>=1.10.10 (from aiobotocore>=2.5.0->dvc-s3)
+  Downloading wrapt-2.5.2-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.ma                                                                                                                              nylinux_2_5_x86_64.whl.metadata (7.6 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.                                                                                                                              5.0->dvc-s3)
+  Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.5.0->dv                                                                                                                              c-s3)
+  Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.5.0->d                                                                                                                              vc-s3)
+  Downloading frozenlist-1.8.0-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_                                                                                                                              64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+Collecting propcache>=0.2.0 (from aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.5.0->dv                                                                                                                              c-s3)
+  Downloading propcache-0.5.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x8                                                                                                                              6_64.manylinux_2_28_x86_64.whl.metadata (25 kB)
+Collecting yarl<2.0,>=1.25.1 (from aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.5.0->d                                                                                                                              vc-s3)
+  Downloading yarl-1.25.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64                                                                                                                              .manylinux_2_28_x86_64.whl.metadata (111 kB)
+Requirement already satisfied: idna>=2.0 in /usr/lib/python3/dist-packages (from                                                                                                                               yarl<2.0,>=1.25.1->aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.5.0->dvc-s3) (3.11)
+Collecting prompt_toolkit>=3.0.36 (from click-repl>=0.4.1->celery->dvc)
+  Downloading prompt_toolkit-3.0.53-py3-none-any.whl.metadata (6.4 kB)
+Collecting cffi>=2.0.0 (from cryptography>=48.0.1->asyncssh<3,>=2.13.1->scmrepo<                                                                                                                              4,>=3.5.2->dvc)
+  Downloading cffi-2.1.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.                                                                                                                              whl.metadata (2.5 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography>=48.0.1->asyncssh<3,>=2.13.                                                                                                                              1->scmrepo<4,>=3.5.2->dvc)
+  Downloading pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+Collecting gitdb<5,>=4.0.1 (from gitpython>3->scmrepo<4,>=3.5.2->dvc)
+  Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython>3->scmrepo<4,>=3.5.2                                                                                                                              ->dvc)
+  Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting omegaconf (from dvc)
+  Downloading omegaconf-2.3.1-py3-none-any.whl.metadata (4.5 kB)
+Collecting antlr4-python3-runtime==4.9.* (from hydra-core>=1.1->dvc)
+  Downloading antlr4-python3-runtime-4.9.3.tar.gz (117 kB)
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: PyYAML>=5.1.0 in /usr/lib/python3/dist-packages (                                                                                                                              from omegaconf->dvc) (6.0.3)
+Collecting appdirs (from iterative-telemetry>=0.0.7->dvc)
+  Downloading appdirs-1.4.4-py2.py3-none-any.whl.metadata (9.0 kB)
+Collecting filelock (from iterative-telemetry>=0.0.7->dvc)
+  Downloading filelock-4.3.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting wcwidth>=0.1.4 (from prompt_toolkit>=3.0.36->click-repl>=0.4.1->celer                                                                                                                              y->dvc)
+  Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_6                                                                                                                              4.whl.metadata (26 kB)
+Collecting annotated-types>=0.6.0 (from pydantic>=2->gto<2,>=1.6.0->dvc)
+  Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.50.5 (from pydantic>=2->gto<2,>=1.6.0->dvc)
+  Downloading pydantic_core-2.50.5-cp314-cp314-manylinux2014_x86_64.manylinux_2_                                                                                                                              17_x86_64.whl.metadata (6.6 kB)
+Collecting typing_extensions>=4.0.0 (from asyncssh<3,>=2.13.1->scmrepo<4,>=3.5.2                                                                                                                              ->dvc)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting typing-inspection>=0.4.4 (from pydantic>=2->gto<2,>=1.6.0->dvc)
+  Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+Collecting python-dotenv>=1.2.2 (from pydantic-settings>=2->gto<2,>=1.6.0->dvc)
+  Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+Requirement already satisfied: chardet>=3.0.2 in /usr/lib/python3/dist-packages                                                                                                                               (from requests>=2.22->dvc) (5.2.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packa                                                                                                                              ges (from requests>=2.22->dvc) (2026.1.4)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/lib/python3/dist-pa                                                                                                                              ckages (from rich>=12->dvc) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/lib/python3/dist-                                                                                                                              packages (from rich>=12->dvc) (2.19.2)
+Requirement already satisfied: mdurl~=0.1 in /usr/lib/python3/dist-packages (fro                                                                                                                              m markdown-it-py>=2.2.0->rich>=12->dvc) (0.1.2)
+Downloading dvc-3.67.1-py3-none-any.whl (470 kB)
+Downloading dpath-2.2.0-py3-none-any.whl (17 kB)
+Downloading dvc_data-3.18.3-py3-none-any.whl (79 kB)
+Downloading dvc_objects-5.3.1-py3-none-any.whl (33 kB)
+Downloading dvc_render-1.0.2-py3-none-any.whl (22 kB)
+Downloading dvc_studio_client-0.23.0-py3-none-any.whl (16 kB)
+Downloading dvc_task-0.40.2-py3-none-any.whl (21 kB)
+Downloading celery-5.7.0-py3-none-any.whl (519 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading click-8.5.1-py3-none-any.whl (126 kB)
+Downloading flatten_dict-0.6.0-py3-none-any.whl (11 kB)
+Downloading flufl_lock-9.2.0-py3-none-any.whl (11 kB)
+Downloading grandalf-0.8-py3-none-any.whl (41 kB)
+Downloading gto-1.10.1-py3-none-any.whl (45 kB)
+Downloading kombu-5.7.0-py3-none-any.whl (266 kB)
+Downloading vine-5.1.0-py3-none-any.whl (9.6 kB)
+Downloading orjson-3.13.0-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64                                                                                                                              .whl (130 kB)
+Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+Downloading platformdirs-4.14.8-py3-none-any.whl (94 kB)
+Downloading scmrepo-3.6.2-py3-none-any.whl (74 kB)
+Downloading asyncssh-2.24.1-py3-none-any.whl (382 kB)
+Downloading dulwich-1.2.21-cp314-cp314-manylinux_2_28_x86_64.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 103.2 MB/s eta 0:00:00
+Downloading shtab-1.13.0-py3-none-any.whl (22 kB)
+Downloading sqltrie-0.11.3-py3-none-any.whl (17 kB)
+Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+Downloading dvc_s3-3.3.0-py3-none-any.whl (14 kB)
+Downloading aiobotocore-3.10.0-py3-none-any.whl (102 kB)
+Downloading aiohttp-3.14.5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_6                                                                                                                              4.manylinux_2_28_x86_64.whl (1.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 59.9 MB/s eta 0:00:00
+Downloading aioitertools-0.13.0-py3-none-any.whl (24 kB)
+Downloading botocore-1.43.117-py3-none-any.whl (16.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.1/16.1 MB 80.8 MB/s eta 0:00:00
+Downloading multidict-7.2.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_                                                                                                                              64.manylinux_2_28_x86_64.whl (506 kB)
+Downloading wrapt-2.5.2-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.many                                                                                                                              linux_2_5_x86_64.whl (251 kB)
+Downloading yarl-1.25.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.m                                                                                                                              anylinux_2_28_x86_64.whl (117 kB)
+Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Downloading aiohttp_retry-2.9.1-py3-none-any.whl (10.0 kB)
+Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Downloading amqp-5.4.2-py3-none-any.whl (51 kB)
+Downloading billiard-4.3.2-py3-none-any.whl (90 kB)
+Downloading click_didyoumean-0.3.1-py3-none-any.whl (3.6 kB)
+Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+Downloading click_repl-0.4.1-py3-none-any.whl (14 kB)
+Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 97.3 MB/s eta 0:00:00
+Downloading cffi-2.1.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.wh                                                                                                                              l (221 kB)
+Downloading dictdiffer-0.10.0-py3-none-any.whl (16 kB)
+Downloading diskcache-5.6.3-py3-none-any.whl (45 kB)
+Downloading dvc_http-2.32.0-py3-none-any.whl (12 kB)
+Downloading frozenlist-1.8.0-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64                                                                                                                              .manylinux_2_5_x86_64.whl (231 kB)
+Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+Downloading funcy-2.1-py3-none-any.whl (29 kB)
+Downloading gitpython-3.2.1-py3-none-any.whl (231 kB)
+Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+Downloading hydra_core-1.3.8-py3-none-any.whl (168 kB)
+Downloading omegaconf-2.3.1-py3-none-any.whl (79 kB)
+Downloading iterative_telemetry-0.0.10-py3-none-any.whl (10 kB)
+Downloading networkx-3.7-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 87.6 MB/s eta 0:00:00
+Downloading prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+Downloading propcache-0.5.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_                                                                                                                              64.manylinux_2_28_x86_64.whl (232 kB)
+Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.ma                                                                                                                              nylinux_2_28_x86_64.whl (155 kB)
+Downloading pydantic-2.14.4-py3-none-any.whl (494 kB)
+Downloading pydantic_core-2.50.5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17                                                                                                                              _x86_64.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 85.6 MB/s eta 0:00:00
+Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Downloading pydantic_settings-2.16.3-py3-none-any.whl (82 kB)
+Downloading pydot-4.0.1-py3-none-any.whl (37 kB)
+Downloading pygit2-1.21.0-cp314-cp314-manylinux_2_26_x86_64.manylinux_2_28_x86_6                                                                                                                              4.whl (4.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 92.9 MB/s eta 0:00:00
+Downloading pygtrie-2.6.2-py3-none-any.whl (33 kB)
+Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+Downloading ruamel_yaml-0.19.1-py3-none-any.whl (118 kB)
+Downloading s3fs-2026.9.0-py3-none-any.whl (33 kB)
+Downloading semver-3.1.2-py3-none-any.whl (19 kB)
+Downloading shortuuid-1.0.13-py3-none-any.whl (10 kB)
+Downloading tabulate-0.10.0-py3-none-any.whl (39 kB)
+Downloading tomlkit-0.15.2-py3-none-any.whl (52 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+Downloading voluptuous-0.16.0-py3-none-any.whl (31 kB)
+Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.                                                                                                                              whl (822 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 822.7/822.7 kB 45.4 MB/s eta 0:00:00
+Downloading zc_lockfile-4.1-py3-none-any.whl (9.2 kB)
+Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+Downloading atpublic-9.0.0-py3-none-any.whl (11 kB)
+Downloading entrypoints-0.4.2-py3-none-any.whl (5.3 kB)
+Downloading filelock-4.3.0-py3-none-any.whl (244 kB)
+Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+Downloading tzlocal-5.4.5-py3-none-any.whl (18 kB)
+Building wheels for collected packages: antlr4-python3-runtime
+  DEPRECATION: Building 'antlr4-python3-runtime' using the legacy setup.py bdist                                                                                                                              _wheel mechanism, which will be removed in a future version. pip 25.3 will enfor                                                                                                                              ce this behaviour change. A possible replacement is to use the standardized buil                                                                                                                              d interface by setting the `--use-pep517` option, (possibly combined with `--no-                                                                                                                              build-isolation`), or adding a `pyproject.toml` file to the source tree of 'antl                                                                                                                              r4-python3-runtime'. Discussion can be found at https://github.com/pypa/pip/issu                                                                                                                              es/6334
+  Building wheel for antlr4-python3-runtime (setup.py) ... done
+  Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.9.                                                                                                                              3-py3-none-any.whl size=144590 sha256=2df06390324b316e87ab530cf1b8c2d4392ad4937b                                                                                                                              b6a218a0ca2851457e685d
+  Stored in directory: /home/ubuntu/.cache/pip/wheels/ea/ca/a6/5ad163e6c66e23b25                                                                                                                              d4e6a81dba06bce77047ef6257d643728
+Successfully built antlr4-python3-runtime
+Installing collected packages: funcy, appdirs, antlr4-python3-runtime, zc.lockfi                                                                                                                              le, wrapt, wcwidth, voluptuous, vine, tzlocal, typing_extensions, tqdm, tomlkit,                                                                                                                               tabulate, smmap, shtab, shortuuid, semver, ruamel.yaml, python-dotenv, python-d                                                                                                                              ateutil, pygtrie, pydot, pycparser, psutil, propcache, platformdirs, pathspec, o                                                                                                                              rjson, omegaconf, networkx, multidict, grandalf, fsspec, frozenlist, flatten-dic                                                                                                                              t, filelock, entrypoints, dvc-render, dulwich, dpath, diskcache, dictdiffer, col                                                                                                                              orama, click, billiard, atpublic, annotated-types, aioitertools, aiohappyeyeball                                                                                                                              s, yarl, typing-inspection, sqltrie, pydantic-core, prompt_toolkit, iterative-te                                                                                                                              lemetry, hydra-core, gitdb, flufl.lock, dvc-studio-client, dvc-objects, click-pl                                                                                                                              ugins, click-didyoumean, cffi, botocore, amqp, aiosignal, pygit2, pydantic, komb                                                                                                                              u, gitpython, dvc-data, cryptography, click-repl, aiohttp, pydantic-settings, ce                                                                                                                              lery, asyncssh, aiohttp-retry, aiobotocore, scmrepo, s3fs, dvc-task, dvc-http, g                                                                                                                              to, dvc, dvc-s3
+   ━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/86 [voluptuous]  WARNING: The scr                                                                                                                              ipt tqdm is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11/86 [tomlkit]  WARNING: The script                                                                                                                               tabulate is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+  WARNING: The script shtab is installed in '/home/ubuntu/.local/bin' which is n                                                                                                                              ot on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+  WARNING: The script shortuuid is installed in '/home/ubuntu/.local/bin' which                                                                                                                               is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+  WARNING: The script pysemver is installed in '/home/ubuntu/.local/bin' which i                                                                                                                              s not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17/86 [ruamel.yaml]  WARNING: The sc                                                                                                                              ript dotenv is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━ 38/86 [dulwich]  WARNING: The script                                                                                                                               dulwich is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━ 62/86 [cffi]  WARNING: The script cf                                                                                                                              fi-gen-src is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━ 70/86 [dvc-data]  WARNING: The scrip                                                                                                                              t dvc-data is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━ 75/86 [celery]  WARNING: The script                                                                                                                               celery is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━ 80/86 [s3fs]  WARNING: The script gt                                                                                                                              o is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺ 84/86 [dvc]  WARNING: The script dvc                                                                                                                               is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+ERROR: pip's dependency resolver does not currently take into account all the pa                                                                                                                              ckages that are installed. This behaviour is the source of the following depende                                                                                                                              ncy conflicts.
+pyopenssl 25.3.0 requires cryptography<47,>=45.0.7, but you have cryptography 50                                                                                                                              .0.2 which is incompatible.
+boto3 1.40.72 requires botocore<1.41.0,>=1.40.72, but you have botocore 1.43.117                                                                                                                               which is incompatible.
+Successfully installed aiobotocore-3.10.0 aiohappyeyeballs-2.7.1 aiohttp-3.14.5                                                                                                                               aiohttp-retry-2.9.1 aioitertools-0.13.0 aiosignal-1.4.0 amqp-5.4.2 annotated-typ                                                                                                                              es-0.8.0 antlr4-python3-runtime-4.9.3 appdirs-1.4.4 asyncssh-2.24.1 atpublic-9.0                                                                                                                              .0 billiard-4.3.2 botocore-1.43.117 celery-5.7.0 cffi-2.1.1 click-8.5.1 click-di                                                                                                                              dyoumean-0.3.1 click-plugins-1.1.1.2 click-repl-0.4.1 colorama-0.4.6 cryptograph                                                                                                                              y-50.0.2 dictdiffer-0.10.0 diskcache-5.6.3 dpath-2.2.0 dulwich-1.2.21 dvc-3.67.1                                                                                                                               dvc-data-3.18.3 dvc-http-2.32.0 dvc-objects-5.3.1 dvc-render-1.0.2 dvc-s3-3.3.0                                                                                                                               dvc-studio-client-0.23.0 dvc-task-0.40.2 entrypoints-0.4.2 filelock-4.3.0 flatt                                                                                                                              en-dict-0.6.0 flufl.lock-9.2.0 frozenlist-1.8.0 fsspec-2026.9.0 funcy-2.1 gitdb-                                                                                                                              4.0.12 gitpython-3.2.1 grandalf-0.8 gto-1.10.1 hydra-core-1.3.8 iterative-teleme                                                                                                                              try-0.0.10 kombu-5.7.0 multidict-7.2.1 networkx-3.7 omegaconf-2.3.1 orjson-3.13.                                                                                                                              0 pathspec-1.1.1 platformdirs-4.14.8 prompt_toolkit-3.0.53 propcache-0.5.4 psuti                                                                                                                              l-7.2.2 pycparser-3.12 pydantic-2.14.4 pydantic-core-2.50.5 pydantic-settings-2.                                                                                                                              16.3 pydot-4.0.1 pygit2-1.21.0 pygtrie-2.6.2 python-dateutil-2.9.0.post0 python-                                                                                                                              dotenv-1.2.4 ruamel.yaml-0.19.1 s3fs-2026.9.0 scmrepo-3.6.2 semver-3.1.2 shortuu                                                                                                                              id-1.0.13 shtab-1.13.0 smmap-5.0.3 sqltrie-0.11.3 tabulate-0.10.0 tomlkit-0.15.2                                                                                                                               tqdm-4.70.1 typing-inspection-0.4.5 typing_extensions-4.16.0 tzlocal-5.4.5 vine                                                                                                                              -5.1.0 voluptuous-0.16.0 wcwidth-0.9.5 wrapt-2.5.2 yarl-1.25.1 zc.lockfile-4.1
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ export AWS_ACCESS_KEY_ID="XXXXXXXX"
+export AWS_SECRET_ACCESS_KEY="XXXXXX"
+export AWS_SESSION_TOKEN="XXXXX"
+export AWS_DEFAULT_REGION="us-east-1"
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ dvc pull
+Command 'dvc' not found, but can be installed with:
+sudo snap install dvc
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ aws sts get-caller-identity
+Command 'aws' not found, but can be installed with:
+sudo snap install aws-cli  # version 1.45.46, or
+sudo apt  install awscli   # version 2.31.35-1
+See 'snap info aws-cli' for additional versions.
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ echo $AWS_ACCESS_KEY_ID
+ASIA3UA3JJ2DY6KZXKCD
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ ~/.local/bin/dvc pull
+Collecting                                           |3.00 [00:00,  197entry/s]
+Fetching
+Building workspace index                             |3.00 [00:00,  120entry/s]
+Comparing indexes                                   |7.00 [00:00, 2.02kentry/s]
+Applying changes                                     |3.00 [00:00,  57.6file/s]
+A       data/processed/dataset_modelado_semanal.parquet
+A       data/raw/nyc311_diario_borough_tipo.parquet
+A       data/raw/nyc_311_safety.parquet
+3 files fetched and 3 files added
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ ls data/raw/nyc311_diario_borough_tipo.p                                                                                                                              arquet
+ls data/processed/dataset_modelado_semanal.parquet
+data/raw/nyc311_diario_borough_tipo.parquet
+data/processed/dataset_modelado_semanal.parquet
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ docker compose up -d --build
+unable to get image 'dsa-proyecto-dashboard': permission denied while trying to                                                                                                                               connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://                                                                                                                              %2Fvar%2Frun%2Fdocker.sock/v1.51/images/dsa-proyecto-dashboard/json": dial unix                                                                                                                               /var/run/docker.sock: connect: permission denied
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ sudo docker compose up -d --buildsudo docker compose up -d --buildsudo docker compose up -d --build^C
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ ^C
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ ^C
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$
+
+>=8.1.0->dvc)
+  Downloading atpublic-9.0.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting entrypoints (from gto<2,>=1.6.0->dvc)
+  Downloading entrypoints-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting pydantic>=2 (from gto<2,>=1.6.0->dvc)
+  Downloading pydantic-2.14.4-py3-none-any.whl.metadata (143 kB)
+Collecting pydantic-settings>=2 (from gto<2,>=1.6.0->dvc)
+  Downloading pydantic_settings-2.16.3-py3-none-any.whl.metadata (4.0 kB)
+Collecting semver>=2.13.0 (from gto<2,>=1.6.0->dvc)
+  Downloading semver-3.1.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting amqp>=5.4.2 (from kombu->dvc)
+  Downloading amqp-5.4.2-py3-none-any.whl.metadata (9.4 kB)
+Collecting gitpython>3 (from scmrepo<4,>=3.5.2->dvc)
+  Downloading gitpython-3.2.1-py3-none-any.whl.metadata (13 kB)
+Collecting pygit2>=1.14.0 (from scmrepo<4,>=3.5.2->dvc)
+  Downloading pygit2-1.21.0-cp314-cp314-manylinux_2_26_x86_64.manylinux_2_28_x86                                                                                                                              _64.whl.metadata (3.7 kB)
+Collecting asyncssh<3,>=2.13.1 (from scmrepo<4,>=3.5.2->dvc)
+  Downloading asyncssh-2.24.1-py3-none-any.whl.metadata (9.8 kB)
+Collecting aiohttp-retry>=2.5.0 (from scmrepo<4,>=3.5.2->dvc)
+  Downloading aiohttp_retry-2.9.1-py3-none-any.whl.metadata (8.8 kB)
+Collecting cryptography>=48.0.1 (from asyncssh<3,>=2.13.1->scmrepo<4,>=3.5.2->dv                                                                                                                              c)
+  Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata                                                                                                                               (4.4 kB)
+Requirement already satisfied: typing_extensions>=4.0.0 in /usr/lib/python3/dist                                                                                                                              -packages (from asyncssh<3,>=2.13.1->scmrepo<4,>=3.5.2->dvc) (4.15.0)
+Requirement already satisfied: urllib3>=2.2.2 in /usr/lib/python3/dist-packages                                                                                                                               (from dulwich->dvc) (2.6.3)
+Collecting s3fs>=2024.12.0 (from dvc-s3)
+  Downloading s3fs-2026.9.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting aiobotocore>=2.5.0 (from dvc-s3)
+  Downloading aiobotocore-3.10.0-py3-none-any.whl.metadata (32 kB)
+Requirement already satisfied: botocore in /usr/lib/python3/dist-packages (from                                                                                                                               dvc-s3) (1.40.72)
+Collecting aiohttp<4.0.0,>=3.14.0 (from aiobotocore>=2.5.0->dvc-s3)
+  Downloading aiohttp-3.14.5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86                                                                                                                              _64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+Collecting aioitertools<1.0.0,>=0.5.1 (from aiobotocore>=2.5.0->dvc-s3)
+  Downloading aioitertools-0.13.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting botocore (from dvc-s3)
+  Downloading botocore-1.43.117-py3-none-any.whl.metadata (5.6 kB)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /usr/lib/python3/dist-p                                                                                                                              ackages (from aiobotocore>=2.5.0->dvc-s3) (1.0.1)
+Collecting multidict<8.0.0,>=6.0.0 (from aiobotocore>=2.5.0->dvc-s3)
+  Downloading multidict-7.2.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x8                                                                                                                              6_64.manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+Collecting wrapt<3.0.0,>=1.10.10 (from aiobotocore>=2.5.0->dvc-s3)
+  Downloading wrapt-2.5.2-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.ma                                                                                                                              nylinux_2_5_x86_64.whl.metadata (7.6 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.                                                                                                                              5.0->dvc-s3)
+  Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.5.0->dv                                                                                                                              c-s3)
+  Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.5.0->d                                                                                                                              vc-s3)
+  Downloading frozenlist-1.8.0-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_                                                                                                                              64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+Collecting propcache>=0.2.0 (from aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.5.0->dv                                                                                                                              c-s3)
+  Downloading propcache-0.5.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x8                                                                                                                              6_64.manylinux_2_28_x86_64.whl.metadata (25 kB)
+Collecting yarl<2.0,>=1.25.1 (from aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.5.0->d                                                                                                                              vc-s3)
+  Downloading yarl-1.25.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64                                                                                                                              .manylinux_2_28_x86_64.whl.metadata (111 kB)
+Requirement already satisfied: idna>=2.0 in /usr/lib/python3/dist-packages (from                                                                                                                               yarl<2.0,>=1.25.1->aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.5.0->dvc-s3) (3.11)
+Collecting prompt_toolkit>=3.0.36 (from click-repl>=0.4.1->celery->dvc)
+  Downloading prompt_toolkit-3.0.53-py3-none-any.whl.metadata (6.4 kB)
+Collecting cffi>=2.0.0 (from cryptography>=48.0.1->asyncssh<3,>=2.13.1->scmrepo<                                                                                                                              4,>=3.5.2->dvc)
+  Downloading cffi-2.1.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.                                                                                                                              whl.metadata (2.5 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography>=48.0.1->asyncssh<3,>=2.13.                                                                                                                              1->scmrepo<4,>=3.5.2->dvc)
+  Downloading pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+Collecting gitdb<5,>=4.0.1 (from gitpython>3->scmrepo<4,>=3.5.2->dvc)
+  Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython>3->scmrepo<4,>=3.5.2                                                                                                                              ->dvc)
+  Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting omegaconf (from dvc)
+  Downloading omegaconf-2.3.1-py3-none-any.whl.metadata (4.5 kB)
+Collecting antlr4-python3-runtime==4.9.* (from hydra-core>=1.1->dvc)
+  Downloading antlr4-python3-runtime-4.9.3.tar.gz (117 kB)
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: PyYAML>=5.1.0 in /usr/lib/python3/dist-packages (                                                                                                                              from omegaconf->dvc) (6.0.3)
+Collecting appdirs (from iterative-telemetry>=0.0.7->dvc)
+  Downloading appdirs-1.4.4-py2.py3-none-any.whl.metadata (9.0 kB)
+Collecting filelock (from iterative-telemetry>=0.0.7->dvc)
+  Downloading filelock-4.3.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting wcwidth>=0.1.4 (from prompt_toolkit>=3.0.36->click-repl>=0.4.1->celer                                                                                                                              y->dvc)
+  Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_6                                                                                                                              4.whl.metadata (26 kB)
+Collecting annotated-types>=0.6.0 (from pydantic>=2->gto<2,>=1.6.0->dvc)
+  Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.50.5 (from pydantic>=2->gto<2,>=1.6.0->dvc)
+  Downloading pydantic_core-2.50.5-cp314-cp314-manylinux2014_x86_64.manylinux_2_                                                                                                                              17_x86_64.whl.metadata (6.6 kB)
+Collecting typing_extensions>=4.0.0 (from asyncssh<3,>=2.13.1->scmrepo<4,>=3.5.2                                                                                                                              ->dvc)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting typing-inspection>=0.4.4 (from pydantic>=2->gto<2,>=1.6.0->dvc)
+  Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+Collecting python-dotenv>=1.2.2 (from pydantic-settings>=2->gto<2,>=1.6.0->dvc)
+  Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+Requirement already satisfied: chardet>=3.0.2 in /usr/lib/python3/dist-packages                                                                                                                               (from requests>=2.22->dvc) (5.2.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packa                                                                                                                              ges (from requests>=2.22->dvc) (2026.1.4)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/lib/python3/dist-pa                                                                                                                              ckages (from rich>=12->dvc) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/lib/python3/dist-                                                                                                                              packages (from rich>=12->dvc) (2.19.2)
+Requirement already satisfied: mdurl~=0.1 in /usr/lib/python3/dist-packages (fro                                                                                                                              m markdown-it-py>=2.2.0->rich>=12->dvc) (0.1.2)
+Downloading dvc-3.67.1-py3-none-any.whl (470 kB)
+Downloading dpath-2.2.0-py3-none-any.whl (17 kB)
+Downloading dvc_data-3.18.3-py3-none-any.whl (79 kB)
+Downloading dvc_objects-5.3.1-py3-none-any.whl (33 kB)
+Downloading dvc_render-1.0.2-py3-none-any.whl (22 kB)
+Downloading dvc_studio_client-0.23.0-py3-none-any.whl (16 kB)
+Downloading dvc_task-0.40.2-py3-none-any.whl (21 kB)
+Downloading celery-5.7.0-py3-none-any.whl (519 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading click-8.5.1-py3-none-any.whl (126 kB)
+Downloading flatten_dict-0.6.0-py3-none-any.whl (11 kB)
+Downloading flufl_lock-9.2.0-py3-none-any.whl (11 kB)
+Downloading grandalf-0.8-py3-none-any.whl (41 kB)
+Downloading gto-1.10.1-py3-none-any.whl (45 kB)
+Downloading kombu-5.7.0-py3-none-any.whl (266 kB)
+Downloading vine-5.1.0-py3-none-any.whl (9.6 kB)
+Downloading orjson-3.13.0-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64                                                                                                                              .whl (130 kB)
+Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+Downloading platformdirs-4.14.8-py3-none-any.whl (94 kB)
+Downloading scmrepo-3.6.2-py3-none-any.whl (74 kB)
+Downloading asyncssh-2.24.1-py3-none-any.whl (382 kB)
+Downloading dulwich-1.2.21-cp314-cp314-manylinux_2_28_x86_64.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 103.2 MB/s eta 0:00:00
+Downloading shtab-1.13.0-py3-none-any.whl (22 kB)
+Downloading sqltrie-0.11.3-py3-none-any.whl (17 kB)
+Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+Downloading dvc_s3-3.3.0-py3-none-any.whl (14 kB)
+Downloading aiobotocore-3.10.0-py3-none-any.whl (102 kB)
+Downloading aiohttp-3.14.5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_6                                                                                                                              4.manylinux_2_28_x86_64.whl (1.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 59.9 MB/s eta 0:00:00
+Downloading aioitertools-0.13.0-py3-none-any.whl (24 kB)
+Downloading botocore-1.43.117-py3-none-any.whl (16.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.1/16.1 MB 80.8 MB/s eta 0:00:00
+Downloading multidict-7.2.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_                                                                                                                              64.manylinux_2_28_x86_64.whl (506 kB)
+Downloading wrapt-2.5.2-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.many                                                                                                                              linux_2_5_x86_64.whl (251 kB)
+Downloading yarl-1.25.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.m                                                                                                                              anylinux_2_28_x86_64.whl (117 kB)
+Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Downloading aiohttp_retry-2.9.1-py3-none-any.whl (10.0 kB)
+Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Downloading amqp-5.4.2-py3-none-any.whl (51 kB)
+Downloading billiard-4.3.2-py3-none-any.whl (90 kB)
+Downloading click_didyoumean-0.3.1-py3-none-any.whl (3.6 kB)
+Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+Downloading click_repl-0.4.1-py3-none-any.whl (14 kB)
+Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 97.3 MB/s eta 0:00:00
+Downloading cffi-2.1.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.wh                                                                                                                              l (221 kB)
+Downloading dictdiffer-0.10.0-py3-none-any.whl (16 kB)
+Downloading diskcache-5.6.3-py3-none-any.whl (45 kB)
+Downloading dvc_http-2.32.0-py3-none-any.whl (12 kB)
+Downloading frozenlist-1.8.0-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64                                                                                                                              .manylinux_2_5_x86_64.whl (231 kB)
+Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+Downloading funcy-2.1-py3-none-any.whl (29 kB)
+Downloading gitpython-3.2.1-py3-none-any.whl (231 kB)
+Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+Downloading hydra_core-1.3.8-py3-none-any.whl (168 kB)
+Downloading omegaconf-2.3.1-py3-none-any.whl (79 kB)
+Downloading iterative_telemetry-0.0.10-py3-none-any.whl (10 kB)
+Downloading networkx-3.7-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 87.6 MB/s eta 0:00:00
+Downloading prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+Downloading propcache-0.5.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_                                                                                                                              64.manylinux_2_28_x86_64.whl (232 kB)
+Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.ma                                                                                                                              nylinux_2_28_x86_64.whl (155 kB)
+Downloading pydantic-2.14.4-py3-none-any.whl (494 kB)
+Downloading pydantic_core-2.50.5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17                                                                                                                              _x86_64.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 85.6 MB/s eta 0:00:00
+Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Downloading pydantic_settings-2.16.3-py3-none-any.whl (82 kB)
+Downloading pydot-4.0.1-py3-none-any.whl (37 kB)
+Downloading pygit2-1.21.0-cp314-cp314-manylinux_2_26_x86_64.manylinux_2_28_x86_6                                                                                                                              4.whl (4.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 92.9 MB/s eta 0:00:00
+Downloading pygtrie-2.6.2-py3-none-any.whl (33 kB)
+Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+Downloading ruamel_yaml-0.19.1-py3-none-any.whl (118 kB)
+Downloading s3fs-2026.9.0-py3-none-any.whl (33 kB)
+Downloading semver-3.1.2-py3-none-any.whl (19 kB)
+Downloading shortuuid-1.0.13-py3-none-any.whl (10 kB)
+Downloading tabulate-0.10.0-py3-none-any.whl (39 kB)
+Downloading tomlkit-0.15.2-py3-none-any.whl (52 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+Downloading voluptuous-0.16.0-py3-none-any.whl (31 kB)
+Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.                                                                                                                              whl (822 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 822.7/822.7 kB 45.4 MB/s eta 0:00:00
+Downloading zc_lockfile-4.1-py3-none-any.whl (9.2 kB)
+Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+Downloading atpublic-9.0.0-py3-none-any.whl (11 kB)
+Downloading entrypoints-0.4.2-py3-none-any.whl (5.3 kB)
+Downloading filelock-4.3.0-py3-none-any.whl (244 kB)
+Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+Downloading tzlocal-5.4.5-py3-none-any.whl (18 kB)
+Building wheels for collected packages: antlr4-python3-runtime
+  DEPRECATION: Building 'antlr4-python3-runtime' using the legacy setup.py bdist                                                                                                                              _wheel mechanism, which will be removed in a future version. pip 25.3 will enfor                                                                                                                              ce this behaviour change. A possible replacement is to use the standardized buil                                                                                                                              d interface by setting the `--use-pep517` option, (possibly combined with `--no-                                                                                                                              build-isolation`), or adding a `pyproject.toml` file to the source tree of 'antl                                                                                                                              r4-python3-runtime'. Discussion can be found at https://github.com/pypa/pip/issu                                                                                                                              es/6334
+  Building wheel for antlr4-python3-runtime (setup.py) ... done
+  Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.9.                                                                                                                              3-py3-none-any.whl size=144590 sha256=2df06390324b316e87ab530cf1b8c2d4392ad4937b                                                                                                                              b6a218a0ca2851457e685d
+  Stored in directory: /home/ubuntu/.cache/pip/wheels/ea/ca/a6/5ad163e6c66e23b25                                                                                                                              d4e6a81dba06bce77047ef6257d643728
+Successfully built antlr4-python3-runtime
+Installing collected packages: funcy, appdirs, antlr4-python3-runtime, zc.lockfi                                                                                                                              le, wrapt, wcwidth, voluptuous, vine, tzlocal, typing_extensions, tqdm, tomlkit,                                                                                                                               tabulate, smmap, shtab, shortuuid, semver, ruamel.yaml, python-dotenv, python-d                                                                                                                              ateutil, pygtrie, pydot, pycparser, psutil, propcache, platformdirs, pathspec, o                                                                                                                              rjson, omegaconf, networkx, multidict, grandalf, fsspec, frozenlist, flatten-dic                                                                                                                              t, filelock, entrypoints, dvc-render, dulwich, dpath, diskcache, dictdiffer, col                                                                                                                              orama, click, billiard, atpublic, annotated-types, aioitertools, aiohappyeyeball                                                                                                                              s, yarl, typing-inspection, sqltrie, pydantic-core, prompt_toolkit, iterative-te                                                                                                                              lemetry, hydra-core, gitdb, flufl.lock, dvc-studio-client, dvc-objects, click-pl                                                                                                                              ugins, click-didyoumean, cffi, botocore, amqp, aiosignal, pygit2, pydantic, komb                                                                                                                              u, gitpython, dvc-data, cryptography, click-repl, aiohttp, pydantic-settings, ce                                                                                                                              lery, asyncssh, aiohttp-retry, aiobotocore, scmrepo, s3fs, dvc-task, dvc-http, g                                                                                                                              to, dvc, dvc-s3
+   ━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/86 [voluptuous]  WARNING: The scr                                                                                                                              ipt tqdm is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11/86 [tomlkit]  WARNING: The script                                                                                                                               tabulate is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+  WARNING: The script shtab is installed in '/home/ubuntu/.local/bin' which is n                                                                                                                              ot on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+  WARNING: The script shortuuid is installed in '/home/ubuntu/.local/bin' which                                                                                                                               is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+  WARNING: The script pysemver is installed in '/home/ubuntu/.local/bin' which i                                                                                                                              s not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17/86 [ruamel.yaml]  WARNING: The sc                                                                                                                              ript dotenv is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━ 38/86 [dulwich]  WARNING: The script                                                                                                                               dulwich is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━ 62/86 [cffi]  WARNING: The script cf                                                                                                                              fi-gen-src is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━ 70/86 [dvc-data]  WARNING: The scrip                                                                                                                              t dvc-data is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━ 75/86 [celery]  WARNING: The script                                                                                                                               celery is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━ 80/86 [s3fs]  WARNING: The script gt                                                                                                                              o is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺ 84/86 [dvc]  WARNING: The script dvc                                                                                                                               is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warn                                                                                                                              ing, use --no-warn-script-location.
+ERROR: pip's dependency resolver does not currently take into account all the pa                                                                                                                              ckages that are installed. This behaviour is the source of the following depende                                                                                                                              ncy conflicts.
+pyopenssl 25.3.0 requires cryptography<47,>=45.0.7, but you have cryptography 50                                                                                                                              .0.2 which is incompatible.
+boto3 1.40.72 requires botocore<1.41.0,>=1.40.72, but you have botocore 1.43.117                                                                                                                               which is incompatible.
+Successfully installed aiobotocore-3.10.0 aiohappyeyeballs-2.7.1 aiohttp-3.14.5                                                                                                                               aiohttp-retry-2.9.1 aioitertools-0.13.0 aiosignal-1.4.0 amqp-5.4.2 annotated-typ                                                                                                                              es-0.8.0 antlr4-python3-runtime-4.9.3 appdirs-1.4.4 asyncssh-2.24.1 atpublic-9.0                                                                                                                              .0 billiard-4.3.2 botocore-1.43.117 celery-5.7.0 cffi-2.1.1 click-8.5.1 click-di                                                                                                                              dyoumean-0.3.1 click-plugins-1.1.1.2 click-repl-0.4.1 colorama-0.4.6 cryptograph                                                                                                                              y-50.0.2 dictdiffer-0.10.0 diskcache-5.6.3 dpath-2.2.0 dulwich-1.2.21 dvc-3.67.1                                                                                                                               dvc-data-3.18.3 dvc-http-2.32.0 dvc-objects-5.3.1 dvc-render-1.0.2 dvc-s3-3.3.0                                                                                                                               dvc-studio-client-0.23.0 dvc-task-0.40.2 entrypoints-0.4.2 filelock-4.3.0 flatt                                                                                                                              en-dict-0.6.0 flufl.lock-9.2.0 frozenlist-1.8.0 fsspec-2026.9.0 funcy-2.1 gitdb-                                                                                                                              4.0.12 gitpython-3.2.1 grandalf-0.8 gto-1.10.1 hydra-core-1.3.8 iterative-teleme                                                                                                                              try-0.0.10 kombu-5.7.0 multidict-7.2.1 networkx-3.7 omegaconf-2.3.1 orjson-3.13.                                                                                                                              0 pathspec-1.1.1 platformdirs-4.14.8 prompt_toolkit-3.0.53 propcache-0.5.4 psuti                                                                                                                              l-7.2.2 pycparser-3.12 pydantic-2.14.4 pydantic-core-2.50.5 pydantic-settings-2.                                                                                                                              16.3 pydot-4.0.1 pygit2-1.21.0 pygtrie-2.6.2 python-dateutil-2.9.0.post0 python-                                                                                                                              dotenv-1.2.4 ruamel.yaml-0.19.1 s3fs-2026.9.0 scmrepo-3.6.2 semver-3.1.2 shortuu                                                                                                                              id-1.0.13 shtab-1.13.0 smmap-5.0.3 sqltrie-0.11.3 tabulate-0.10.0 tomlkit-0.15.2                                                                                                                               tqdm-4.70.1 typing-inspection-0.4.5 typing_extensions-4.16.0 tzlocal-5.4.5 vine                                                                                                                              -5.1.0 voluptuous-0.16.0 wcwidth-0.9.5 wrapt-2.5.2 yarl-1.25.1 zc.lockfile-4.1
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ export AWS_ACCESS_KEY_ID="XXXX"
+export AWS_SECRET_ACCESS_KEY="XXXX"
+export AWS_SESSION_TOKEN="XXXXXX"
+export AWS_DEFAULT_REGION="us-east-1"
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ dvc pull
+Command 'dvc' not found, but can be installed with:
+sudo snap install dvc
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ aws sts get-caller-identity
+Command 'aws' not found, but can be installed with:
+sudo snap install aws-cli  # version 1.45.46, or
+sudo apt  install awscli   # version 2.31.35-1
+See 'snap info aws-cli' for additional versions.
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ echo $AWS_ACCESS_KEY_ID
+XXXXXXX
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ ~/.local/bin/dvc pull
+Collecting                                           |3.00 [00:00,  197entry/s]
+Fetching
+Building workspace index                             |3.00 [00:00,  120entry/s]
+Comparing indexes                                   |7.00 [00:00, 2.02kentry/s]
+Applying changes                                     |3.00 [00:00,  57.6file/s]
+A       data/processed/dataset_modelado_semanal.parquet
+A       data/raw/nyc311_diario_borough_tipo.parquet
+A       data/raw/nyc_311_safety.parquet
+3 files fetched and 3 files added
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ ls data/raw/nyc311_diario_borough_tipo.p                                                                                                                              arquet
+ls data/processed/dataset_modelado_semanal.parquet
+data/raw/nyc311_diario_borough_tipo.parquet
+data/processed/dataset_modelado_semanal.parquet
+
+
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+login as: ubuntu
+Authenticating with public key "Imported-Openssh-Key"
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 • MobaXterm Personal Edition v23.2 •                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ⮞ SSH session to ubuntu@35.168.9.198                                 │
+    │   • Direct SSH      :  ✓                                             │
+    │   • SSH compression :  ✓                                             │
+    │   • SSH-browser     :  ✓                                             │
+    │   • X11-forwarding  :  ✓  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ⮞ For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Welcome to Ubuntu 26.04.1 LTS (GNU/Linux 7.0.0-1018-aws x86_64)
+
+ * Documentation:  https://docs.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Sun Nov 22 16:39:26 UTC 2026
+
+  System load:  0.09               Processes:             129
+  Usage of /:   18.0% of 18.25GB   Users logged in:       0
+  Memory usage: 10%                IPv4 address for enX0: 172.31.40.115
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+2 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+Last login: Sun Nov 22 16:29:15 2026 from 201.233.6.189
+ubuntu@ip-172-31-40-115:~$ docker compose up -d --build
+no configuration file provided: not found	
+ubuntu@ip-172-31-40-115:~$ export AWS_ACCESS_KEY_ID="XXXXX"
+export AWS_SECRET_ACCESS_KEY="XXXXXXXX"
+export AWS_SESSION_TOKEN="XXXXXX"
+export AWS_DEFAULT_REGION="us-east-1"
+ubuntu@ip-172-31-40-115:~$ sudo docker compose up -d --build
+no configuration file provided: not found
+ubuntu@ip-172-31-40-115:~$ cd dsa-proyecto/
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ docker compose up -d --build
+WARN[0000] Docker Compose is configured to build using Bake, but buildx isn't installed
+[+] Building 131.4s (25/25) FINISHED                                   docker:default
+ => [api internal] load build definition from Dockerfile.api                     0.0s
+ => => transferring dockerfile: 667B                                             0.0s
+ => [dashboard internal] load metadata for docker.io/library/python:3.12-slim    0.4s
+ => [api internal] load .dockerignore                                            0.0s
+ => => transferring context: 2B                                                  0.0s
+ => [dashboard 1/7] FROM docker.io/library/python:3.12-slim@sha256:5e2bdb1b0d54  2.1s
+ => => resolve docker.io/library/python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb  0.0s
+ => => sha256:05e0eee5572e9c9f50408a2132590133b830a668a1cf2ff2b150f 248B / 248B  0.0s
+ => => sha256:68bced9e0afa4479df17c3646e27c7c7e9ce9ba70c0e6c73b 1.29MB / 1.29MB  0.1s
+ => => sha256:2dc99d2d0a39fce31e37615eb4c932e16dcc4c2b0ce9993 12.12MB / 12.12MB  0.3s
+ => => sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9c 29.86MB / 29.86MB  0.5s
+ => => extracting sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2  0.9s
+ => => extracting sha256:68bced9e0afa4479df17c3646e27c7c7e9ce9ba70c0e6c73b68264  0.1s
+ => => extracting sha256:2dc99d2d0a39fce31e37615eb4c932e16dcc4c2b0ce99937142800  0.4s
+ => => extracting sha256:05e0eee5572e9c9f50408a2132590133b830a668a1cf2ff2b150f1  0.0s
+ => [api internal] load build context                                            0.0s
+ => => transferring context: 76.29kB                                             0.0s
+ => CACHED [dashboard 2/7] WORKDIR /app                                          0.2s
+ => [api 3/9] RUN apt-get update     && apt-get install -y --no-install-recomme  8.7s
+ => [api 4/9] COPY model-package/dist/nyc311_model-0.1.0-py3-none-any.whl /tmp/  0.0s
+ => [api 5/9] RUN pip install --no-cache-dir /tmp/nyc311_model-0.1.0-py3-none-  21.2s
+ => [api 6/9] COPY api/requirements.txt /tmp/requirements-api.txt                0.1s
+ => [api 7/9] RUN pip install --no-cache-dir -r /tmp/requirements-api.txt pyar  17.0s
+ => [api 8/9] COPY api/ /app/api/                                                0.1s
+ => [api 9/9] COPY data/processed/dataset_modelado_semanal.parquet /app/data/pr  0.0s
+ => [api] exporting to image                                                    27.1s
+ => => exporting layers                                                         19.3s
+ => => exporting manifest sha256:8cccfbe5b27052b8f0c17a88d901075464c4587b07034b  0.0s
+ => => exporting config sha256:741ed7d2d543bef2e7c0afc0e8761bf0d033a61ea4898260  0.0s
+ => => exporting attestation manifest sha256:fc59161e0fafe7f154afd96fd65b946ec7  0.0s
+ => => exporting manifest list sha256:b4258f1f361305fb8db6a4b7073d4efdcf836f30d  0.0s
+ => => naming to docker.io/library/dsa-proyecto-api:latest                       0.0s
+ => => unpacking to docker.io/library/dsa-proyecto-api:latest                    7.7s
+ => [api] resolving provenance for metadata file                                 0.0s
+ => [dashboard internal] load build definition from Dockerfile.dashboard         0.0s
+ => => transferring dockerfile: 627B                                             0.0s
+ => [dashboard internal] load .dockerignore                                      0.0s
+ => => transferring context: 2B                                                  0.0s
+ => [dashboard internal] load build context                                      0.0s
+ => => transferring context: 1.22MB                                              0.0s
+ => [dashboard 3/7] RUN pip install --no-cache-dir     streamlit>=1.30.0     p  23.7s
+ => [dashboard 4/7] COPY dashboard/app.py /app/dashboard/app.py                  0.1s
+ => [dashboard 5/7] COPY data/raw/nyc311_diario_borough_tipo.parquet /app/data/  0.0s
+ => [dashboard 6/7] COPY data/processed/dataset_modelado_semanal.parquet /app/d  0.0s
+ => [dashboard 7/7] RUN mkdir /app/.git                                          0.2s
+ => [dashboard] exporting to image                                              29.9s
+ => => exporting layers                                                         24.5s
+ => => exporting manifest sha256:b7fd68127901549a07afeb8e48a30d0065348830d7d7e2  0.0s
+ => => exporting config sha256:cb53000c73304998e8d3c6bee70969b40edbf672aeaafbd5  0.0s
+ => => exporting attestation manifest sha256:4dfbcb3544fa4e6d93081f9df4f01e88dd  0.0s
+ => => exporting manifest list sha256:d04b406e918f3992ab85b0d023089ca24002a5517  0.0s
+ => => naming to docker.io/library/dsa-proyecto-dashboard:latest                 0.0s
+ => => unpacking to docker.io/library/dsa-proyecto-dashboard:latest              5.3s
+ => [dashboard] resolving provenance for metadata file                           0.0s
+[+] Running 5/5
+ v api                                 Built                                     0.0s
+ v dashboard                           Built                                     0.0s
+ v Network dsa-proyecto_default        Created                                   0.0s
+ v Container dsa-proyecto-api-1        Healthy                                  32.3s
+ v Container dsa-proyecto-dashboard-1  S...                                     31.1s
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ docker ps
+CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS                    PORTS                                         NAMES
+a97b6aa356d1   dsa-proyecto-dashboard   "streamlit run dashb…"   43 seconds ago   Up 12 seconds             0.0.0.0:8501->8501/tcp, [::]:8501->8501/tcp   dsa-proyecto-dashboard-1
+b0ecd87699e4   dsa-proyecto-api         "uvicorn api.app.mai…"   44 seconds ago   Up 42 seconds (healthy)   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   dsa-proyecto-api-1
+ubuntu@ip-172-31-40-115:~/dsa-proyecto$ curl http://localhost:8000/health
+{"status":"ok","servicio":"NYC311 API"}ubuntu@ip-172-31-40-115:~/dsa-proyecto$ 35.168.9.198
+
+
+
+
+
