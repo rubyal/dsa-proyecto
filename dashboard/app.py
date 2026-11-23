@@ -98,12 +98,33 @@ st.markdown("""
         font-weight: 600;
     }
     .tabla-pred td {
-        padding: 8px 12px;
+        padding: 12px;
         text-align: center;
-        border-bottom: 1px solid #eee;
+        color: #F9FAFB;
+        border-bottom: 1px solid #374151;
+        background: transparent;
     }
-    .tabla-pred tr:nth-child(even) { background: #fafafa; }
-    .tabla-pred tr:hover { background: #f0f4ff; }
+
+    /* Filas oscuras alternadas */
+    .tabla-pred tr:nth-child(odd) {
+        background: #1F2937;
+    }
+
+    .tabla-pred tr:nth-child(even) {
+        background: #111827;
+    }
+
+    /* Resaltar fila al pasar el cursor */
+    .tabla-pred tr:hover {
+        background: #374151;
+    }
+
+    /* Nombres de boroughs siempre legibles */
+    .tabla-pred td:first-child {
+        color: #FFFFFF;
+        font-weight: 600;
+        text-align: left;
+    }
 
     .badge-baja {
         background: #e3f2fd; color: #1565c0;
@@ -339,9 +360,11 @@ def predecir_proxima_semana_api(_datos_modelado):
     return pd.DataFrame(predicciones)
 
 
+
 def predecir_por_categoria(sem_cat, umbrales_cat):
-    """Genera predicción por categoría y borough (últimas 4 semanas)."""
+    """Clasifica la demanda por borough y categoría usando el historial."""
     resultados = []
+
     for borough in BOROUGHS:
         for cat in CATEGORIAS_PRINCIPALES:
             datos_bc = sem_cat[
@@ -349,32 +372,47 @@ def predecir_por_categoria(sem_cat, umbrales_cat):
                 & (sem_cat["categoria"] == cat)
             ].sort_values("semana")
 
-            if datos_bc.empty:
+            key = (borough, cat)
+            umbral = umbrales_cat.get(key)
+
+            # No asignar Media cuando no hay información suficiente.
+            if len(datos_bc) < 4 or umbral is None:
                 resultados.append({
                     "borough": borough,
                     "categoria": cat,
-                    "nivel": "Media",
+                    "nivel": "Sin datos",
+                    "media_4": None,
+                    "p33": None,
+                    "p66": None,
+                    "criterio": "Información insuficiente",
                 })
                 continue
 
-            media_4 = datos_bc.tail(4)["n"].mean()
-            key = (borough, cat)
-            if key in umbrales_cat:
-                nivel = etiquetar(
-                    media_4,
-                    umbrales_cat[key]["p33"],
-                    umbrales_cat[key]["p66"],
-                )
+            media_4 = float(datos_bc.tail(4)["n"].mean())
+            p33 = float(umbral["p33"])
+            p66 = float(umbral["p66"])
+
+            nivel = etiquetar(media_4, p33, p66)
+
+            if nivel == "Baja":
+                criterio = "Promedio 4 semanas <= P33"
+            elif nivel == "Media":
+                criterio = "P33 < promedio 4 semanas <= P66"
             else:
-                nivel = "Media"
+                criterio = "Promedio 4 semanas > P66"
 
             resultados.append({
                 "borough": borough,
                 "categoria": cat,
                 "nivel": nivel,
+                "media_4": media_4,
+                "p33": p33,
+                "p66": p66,
+                "criterio": criterio,
             })
 
     return pd.DataFrame(resultados)
+
 
 
 @st.cache_data
@@ -614,10 +652,14 @@ if "Inicio" in pagina:
 
     st.divider()
 
-    # --- Tabla de predicción por borough y categoría (como en el mockup) ---
-    st.subheader(
-        f"Predicción de la próxima semana: "
-        f"{proxima_fecha.strftime('%d/%m/%Y')}"
+# --- Indicadores históricos por borough y categoría ---
+    st.subheader("Nivel de demanda por categoría de solicitud")
+
+    st.caption(
+    "Estimación orientativa basada en el promedio de solicitudes "
+    "de las últimas 4 semanas y los percentiles históricos P33 y P66 "
+    "de cada borough y categoría. "
+    "No es una predicción generada por RidgeClassifier."
     )
 
     categorias_cols = list(CATEGORIAS_PRINCIPALES.keys())
@@ -636,11 +678,34 @@ if "Inicio" in pagina:
                 (pred_cat["borough"] == borough)
                 & (pred_cat["categoria"] == cat)
             ]
+            
             if not nivel_row.empty:
-                nivel = nivel_row.iloc[0]["nivel"]
+                fila = nivel_row.iloc[0]
+                nivel = fila["nivel"]
+
+                if nivel == "Sin datos":
+                    contenido = "Sin datos"
+                    detalle = "Información histórica insuficiente"
+                else:
+                    media_4 = float(fila["media_4"])
+                    p33 = float(fila["p33"])
+                    p66 = float(fila["p66"])
+
+                    detalle = (
+                        f"Promedio últimas 4 semanas: {media_4:,.0f} | "
+                        f"P33: {p33:,.0f} | "
+                        f"P66: {p66:,.0f} | "
+                        f"Criterio: {fila['criterio']}"
+                    )
+                    contenido = badge_html(nivel)
             else:
-                nivel = "Media"
-            rows_html += f"<td>{badge_html(nivel)}</td>"
+                contenido = "Sin datos"
+                detalle = "Sin información disponible"
+
+            rows_html += (
+                f'<td title="{detalle}">{contenido}</td>'
+            )
+
         rows_html += "</tr>"
 
     st.markdown(
@@ -713,6 +778,20 @@ elif "Análisis" in pagina:
             height=450,
         )
         st.plotly_chart(fig_serie, use_container_width=True)
+        
+        st.info(
+            "Interpretación de la serie semanal: los valores representan "
+            "el total de solicitudes registradas por borough durante cada semana. "
+            "Los incrementos extraordinarios del Bronx alrededor del "
+            "30/12/2024 y 06/01/2025 están asociados principalmente con "
+            "solicitudes de tipo 'Noise - Residential'. "
+            "En esas semanas se registraron 25.081 y 23.945 solicitudes "
+            "de ese tipo, respectivamente. "
+            "Estos valores se verificaron en el archivo histórico procesado; "
+            "aún no se han contrastado con los registros individuales "
+            "de la fuente original NYC 311."
+        )
+
 
     # --- Distribución de niveles + umbrales ---
     col_a, col_b = st.columns(2)
