@@ -1,0 +1,19 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends git \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY model-package/dist/nyc311_model-0.1.0-py3-none-any.whl /tmp/
+RUN pip install --no-cache-dir /tmp/nyc311_model-0.1.0-py3-none-any.whl
+
+COPY api/requirements.txt /tmp/requirements-api.txt
+RUN pip install --no-cache-dir -r /tmp/requirements-api.txt pyarrow
+
+COPY api/ /app/api/
+COPY data/processed/dataset_modelado_semanal.parquet /app/data/processed/dataset_modelado_semanal.parquet
+
+EXPOSE 8000
+CMD ["uvicorn", "api.app.main:app", "--host", "0.0.0.0", "--port", "8000"]

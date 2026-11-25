@@ -1,0 +1,11 @@
+﻿Etapa,Modelo,N,Accuracy,F1-macro,Precision Media,Recall Baja,Recall Media,Recall Alta,Alta->Baja
+Comparacion inicial,Dummy,265,0.332075,0.166195,0.332075,0.000000,1.000000,0.000000,0
+Comparacion inicial,Ridge_0.1,265,0.600000,0.590012,0.466667,0.735294,0.397727,0.653333,7
+Comparacion inicial,Logistica_C_1,265,0.547170,0.534648,0.447761,0.666667,0.340909,0.626667,8
+Comparacion inicial,RandomForest,265,0.505660,0.500703,0.450704,0.529412,0.363636,0.640000,17
+Comparacion inicial,HistGradientBoosting,265,0.464151,0.460882,0.391304,0.519608,0.409091,0.453333,14
+Ajustes Ridge,Ridge_alpha_0.01,265,0.584906,0.578389,0.444444,0.705882,0.409091,0.626667,8
+Ajustes Ridge,Ridge_alpha_1,265,0.588679,0.556051,0.488889,0.784314,0.250000,0.720000,7
+Ajustes Ridge,Ridge_balanceado,265,0.607547,0.593318,0.477612,0.754902,0.363636,0.693333,7
+Ajustes Ridge,Ridge_variables_relativas,265,0.607547,0.599303,0.486486,0.715686,0.409091,0.693333,8
+Baseline historico,Referencia_semana_anterior,265,0.611321,0.608033,0.478261,0.705882,0.500000,0.613333,5
